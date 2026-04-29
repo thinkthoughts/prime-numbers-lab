@@ -1,0 +1,103 @@
+{
+  "params": {
+    "N_MAX": 1000000,
+    "RANDOM_SEED": 9423,
+    "NOTEBOOK_ID": "02_prime_gaps",
+    "NOTEBOOK_TITLE": "Prime Gaps",
+    "constraint": "prime gaps compared to logarithmic scaling"
+  },
+  "summary": {
+    "n_max": 1000000,
+    "prime_count": 78498,
+    "gap_count": 78497,
+    "first_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29
+    ],
+    "first_gaps": [
+      1,
+      2,
+      2,
+      4,
+      2,
+      4,
+      2,
+      4,
+      6,
+      2
+    ],
+    "last_primes": [
+      999863,
+      999883,
+      999907,
+      999917,
+      999931,
+      999953,
+      999959,
+      999961,
+      999979,
+      999983
+    ],
+    "last_gaps": [
+      10,
+      20,
+      24,
+      10,
+      14,
+      22,
+      6,
+      2,
+      18,
+      4
+    ]
+  },
+  "measurement": {
+    "mean_gap_all": 12.739098309489535,
+    "mean_log_all": 12.719853746411662,
+    "median_gap_all": 10.0,
+    "max_gap_all": 114,
+    "mean_gap_after_100": 12.741895198287287,
+    "mean_log_after_100": 12.722839116394097,
+    "median_gap_after_100": 10.0,
+    "max_gap_after_100": 114,
+    "mean_relative_drift_after_100": 0.599698962469116,
+    "median_relative_drift_after_100": 0.5335851623652209,
+    "cgcs_gap_logscale": 0.6251176149145662
+  },
+  "recoverability": {
+    "recoverability_score_bin_mean": 0.9080612275202736,
+    "definition": "1 / (1 + mean bin-level relative error between mean gap and mean log baseline)",
+    "note": "log scaling recovers coarse bin-level gap scale, not exact gaps"
+  },
+  "cgcs": {
+    "score": 0.6251176149145662,
+    "definition": "CGCS_gap_logscale = 1 / (1 + mean(|g_n - log(p_n)|/log(p_n))) for p_n >= 100",
+    "interpretation": "Closer to 1 indicates lower average drift from logarithmic gap scale."
+  },
+  "figures": [
+    "02_prime_gaps/figures/02_gap_histogram.png",
+    "02_prime_gaps/figures/02_gaps_vs_log_baseline.png",
+    "02_prime_gaps/figures/02_mean_gap_vs_log_by_scale.png"
+  ],
+  "data": {
+    "summary": "02_prime_gaps/data/02_summary.csv",
+    "prime_gaps": "02_prime_gaps/data/02_prime_gaps.csv",
+    "scale_windows": "02_prime_gaps/data/02_scale_windows.csv"
+  },
+  "docs": {
+    "interpretation": "02_prime_gaps/docs/02_interpretation.md",
+    "design_notes": "02_prime_gaps/docs/02_design_notes.md"
+  },
+  "tex": {
+    "summary_snippet": "02_prime_gaps/tex/02_summary_snippet.tex",
+    "math_notes": "02_prime_gaps/tex/02_math_notes.tex"
+  }
+}
