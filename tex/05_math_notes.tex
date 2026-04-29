@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Random vs Sieve}
+
+\subsection*{Prime set}
+
+\[
+P_N = \{p : p \le N\}.
+\]
+
+\subsection*{Recovery score}
+
+For a candidate set $S$, define
+\[
+CGCS_{\mathrm{recovery}}(S) =
+\frac{|S \cap P_N|}{|P_N|}.
+\]
+
+\subsection*{Recovery drift}
+
+\[
+drift_{\mathrm{recovery}}(S) = 1 - CGCS_{\mathrm{recovery}}(S).
+\]
+
+\subsection*{Density}
+
+\[
+density(S) = \frac{|S|}{N-1}.
+\]
+
+\subsection*{Core distinction}
+
+\[
+|S| = |P_N| \nRightarrow S = P_N.
+\]
+
+Same count does not imply same structure.
+
+\end{document}

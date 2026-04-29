@@ -1,0 +1,18 @@
+\section*{Random vs Sieve}
+
+This notebook compares deterministic sieve filtering against random removal controls.
+
+The recovery score is
+\[
+CGCS_{\mathrm{recovery}}(S)=
+\frac{|S\cap P_N|}{|P_N|}.
+\]
+
+For $N=200,000$:
+\begin{itemize}
+  \item sieve recovery $= 1.000000$
+  \item random-count recovery $= 0.088634$
+  \item random-layer recovery $= 0.089858$
+\end{itemize}
+
+Same count does not imply same structure.
