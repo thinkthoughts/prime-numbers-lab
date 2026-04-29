@@ -1,0 +1,10 @@
+
+\subsection{Statistical validation of low-rank residue memory}
+
+We validate the two-step memory residual
+\[
+\Delta = P^{(2)}_{\mathrm{emp}} - P^2
+\]
+against iid-shuffle, first-order Markov-synthetic, block-bootstrap, and window-bootstrap null ensembles. For each ensemble, we compute the Frobenius norm of \(\Delta\), Jensen--Shannon divergence between \(P^{(2)}_{\mathrm{emp}\) and \(P^2\), top singular value of \(\Delta\), rank requirements for residual-energy capture, and rank-4 low-rank correction improvement.
+
+Across the validation suite, the real prime-residue sequence exhibits a stronger and more coherent two-step residual than the null controls. Its singular spectrum remains elevated relative to shuffle and Markov-synthetic bands, and a low-rank correction captures the dominant residual structure. These tests support the interpretation that the memory operator is not merely a sampling artifact, but a reproducible, low-dimensional deviation from first-order Markov dynamics.
