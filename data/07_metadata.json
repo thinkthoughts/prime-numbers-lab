@@ -1,0 +1,104 @@
+{
+  "params": {
+    "N_MAX": 200000,
+    "RANDOM_SEED": 9423,
+    "SCENARIOS": [
+      {
+        "name": "mixed_keep_75_noise_25",
+        "kind": "mixed",
+        "keep_fraction": 0.75,
+        "noise_fraction": 0.25
+      },
+      {
+        "name": "mixed_keep_50_noise_50",
+        "kind": "mixed",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "mixed_keep_25_noise_100",
+        "kind": "mixed",
+        "keep_fraction": 0.25,
+        "noise_fraction": 1.0
+      },
+      {
+        "name": "biased_low_missing_high_noise",
+        "kind": "biased_range",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "adversarial_mod6_noise_50",
+        "kind": "adversarial_mod6",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "adversarial_mod6_noise_100",
+        "kind": "adversarial_mod6",
+        "keep_fraction": 0.25,
+        "noise_fraction": 1.0
+      }
+    ],
+    "FILTER_DEPTHS": [
+      5,
+      11,
+      31,
+      101,
+      447
+    ],
+    "DENSITY_MODEL": "x_over_log_x_minus_1",
+    "COMPLETION_BIN_COUNT": 32,
+    "NOTEBOOK_ID": "07_constraint_reconstruction",
+    "NOTEBOOK_TITLE": "Constraint Reconstruction"
+  },
+  "summary": {
+    "n_max": 200000,
+    "universe_count": 199999,
+    "prime_count": 17984,
+    "composite_count": 182015,
+    "mod6_composite_count": 48684,
+    "filter_prime_count": 86
+  },
+  "measurement": {
+    "mean_raw_precision": 0.4416666666666667,
+    "mean_sieve_precision": 1.0,
+    "mean_reconstruction_recovery": 0.9908807829181495,
+    "mean_reconstruction_precision": 1.0,
+    "mean_reconstruction_f1": 0.9954195062004246,
+    "mean_reconstruction_gap_drift": 0.5877890637715888,
+    "candidate_completion_count": 57470,
+    "scenario_count": 6
+  },
+  "cgcs": {
+    "score": 0.9954195062004246,
+    "definition": "mean F1 score of density-guided reconstruction across stress-test scenarios",
+    "interpretation": "Filtering restores precision; reconstruction trades precision for recovery; gap drift checks structural realism."
+  },
+  "figures": [
+    "07_constraint_reconstruction/figures/07_stage_precision_recovery.png",
+    "07_constraint_reconstruction/figures/07_f1_by_stage.png",
+    "07_constraint_reconstruction/figures/07_filter_depth_sweep.png",
+    "07_constraint_reconstruction/figures/07_density_drift_by_stage.png",
+    "07_constraint_reconstruction/figures/07_confusion_counts.png",
+    "07_constraint_reconstruction/figures/07_candidate_completion_distribution.png",
+    "07_constraint_reconstruction/figures/07_gap_drift_by_stage.png",
+    "07_constraint_reconstruction/figures/07_reconstructed_gap_vs_logx.png"
+  ],
+  "data": {
+    "summary": "07_constraint_reconstruction/data/07_summary.csv",
+    "stage_metrics": "07_constraint_reconstruction/data/07_stage_metrics.csv",
+    "filter_depth_sweep": "07_constraint_reconstruction/data/07_filter_depth_sweep.csv",
+    "candidate_completions": "07_constraint_reconstruction/data/07_candidate_completions.csv",
+    "confusion_counts": "07_constraint_reconstruction/data/07_confusion_counts.csv",
+    "gap_diagnostics": "07_constraint_reconstruction/data/07_gap_diagnostics.csv"
+  },
+  "docs": {
+    "interpretation": "07_constraint_reconstruction/docs/07_interpretation.md",
+    "design_notes": "07_constraint_reconstruction/docs/07_design_notes.md"
+  },
+  "tex": {
+    "summary_snippet": "07_constraint_reconstruction/tex/07_summary_snippet.tex",
+    "math_notes": "07_constraint_reconstruction/tex/07_math_notes.tex"
+  }
+}
