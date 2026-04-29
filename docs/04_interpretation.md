@@ -1,103 +1,218 @@
-# Sieve Constraints and Asymptotic Diagnostics
+# Sieve Constraints and Asymptotic Diagnostics (Notebook 04)
 
 ## 1. Empirical structure
 
-Across sieve layers and increasing max filter prime Q:
+Across sieve layers and increasing max filter prime \(Q\):
 
 - candidate count decreases monotonically  
 - retention fraction follows a smooth decay  
-- log-product exhibits near-linear structure in log log Q  
+- log-product exhibits near-linear structure in \(\log\log Q\)
 
-This suggests convergence toward a known asymptotic regime.
+This indicates convergence toward a known asymptotic regime.
 
 ---
 
-## 2. Product baseline comparison
+## 2. Retained candidates by layer
 
-We compare observed retention to the classical baseline:
+![Retained candidates](../figures/04_retained_candidates_by_layer.png)
 
-M(Q) ≈ 1 / log Q
+Candidate count decreases rapidly under early constraints, then stabilizes as only primes remain.
+
+---
+
+## 3. Removed candidates by prime filter
+
+![Removed by filter](../figures/04_removed_by_filter.png)
+
+Early primes dominate removal:
+
+- removal strength scales ≈ \(1/p\)  
+- most composite structure is eliminated early  
+
+---
+
+## 4. Retention and drift
+
+![Retention and drift](../figures/04_retention_and_drift_by_layer.png)
+
+- retention decreases smoothly  
+- drift accumulates monotonically  
+
+Interpretation:
+
+> composite structure is progressively removed under layered constraints
+
+---
+
+## 5. Product baseline comparison
+
+![Retention vs product baseline](../figures/04_retention_vs_product_baseline.png)
+
+We compare observed retention to:
+
+\[
+M(Q) = \prod_{p \le Q} \left(1 - \frac{1}{p}\right)
+\]
 
 Observations:
 
-- agreement is strong across all Q  
+- strong agreement across all \(Q\)  
 - deviations are small and structured  
-- error is bounded and non-random  
+
+Interpretation:
+
+> the product baseline is the first-order term in sieve estimates; deviations arise from correlations between divisibility constraints
 
 ---
 
-## 3. Log–log linearization
+## 6. Log–log linearization
+
+![Log product vs log log](../figures/04_log_product_vs_loglog.png)
 
 We analyze:
 
--log M(Q) vs log log Q
+\[
+-\log M(Q) \quad \text{vs} \quad \log\log Q
+\]
 
 Findings:
 
 - near-linear relationship  
-- fitted slope increases with Q  
-- slope remains below 1 in finite range  
+- slope < 1 in finite range  
 
 ---
 
-## 4. Slope vs max Q
+## 7. Log–log slope fit
 
-Tracking the fitted slope:
+![Log-log fit overlay](../figures/04_loglog_fit_overlay.png)
 
-- slope(Q) increases monotonically  
-- observed range: ~0.64 → ~0.82  
-- theoretical limit: 1  
+Fit:
+
+\[
+-\log M(Q) \approx a \log\log Q + b
+\]
+
+Observed:
+
+- slope ≈ 0.816  
+- \(R^2 \approx 0.99\)
+
+Theory:
+
+\[
+-\log M(Q) \sim \log\log Q
+\]
 
 Interpretation:
 
-finite sieve depth underestimates asymptotic slope
+> slope < 1 indicates pre-asymptotic constraint accumulation
 
 ---
 
-## 5. Residual definition
+## 8. Slope vs max \(Q\)
 
-R(Q) = -log M(Q) - log log Q
+![Slope vs max Q](../figures/04_slope_vs_max_q.png)
+
+- slope increases monotonically (~0.64 → ~0.82)  
+- theoretical limit: **1**
+
+Interpretation:
+
+> finite sieve depth underestimates asymptotic scaling, but converges toward it
 
 ---
 
-## 6. Residual convergence
+## 9. Residual definition
 
-Empirical behavior:
+\[
+R(Q) = -\log M(Q) - \log\log Q
+\]
 
-- R(Q) decreases and stabilizes  
+This removes leading-order growth and isolates constant behavior.
+
+---
+
+## 10. Residual convergence
+
+![Residual vs max Q](../figures/04_residual_vs_max_q.png)
+
+Observations:
+
+- residual stabilizes  
 - running mean smooths fluctuations  
-- tail mean approaches constant ≈ 0.58  
+- tail mean → ≈ **0.58**  
 - tail slope → ~0  
 
 Matches:
 
--log M(Q) = log log Q + γ + o(1)
+\[
+-\log M(Q) = \log\log Q + \gamma + o(1)
+\]
 
-γ ≈ 0.57721 (Euler–Mascheroni constant)
+where:
+
+\[
+\gamma \approx 0.57721
+\]
 
 ---
 
-## 7. Convergence diagnostics
+## 11. Residual interpretation
 
-- tail slope → near 0  
+- deviation from slope-1 is **systematic**, not noise  
+- convergence is toward a **constant offset**  
+- fluctuations shrink with increasing \(Q\)
+
+---
+
+## 12. Convergence diagnostics
+
+- tail slope → ~0  
 - tail standard deviation → small  
 - tail range → bounded  
 
 Score:
 
-score = 1 / (1 + |slope| + std + range)
+\[
+\text{score} = \frac{1}{1 + |\text{slope}| + \text{std} + \text{range}}
+\]
+
+Higher score ⇒ stronger convergence to constant.
 
 ---
 
-## 8. Core result
+## 13. Product-baseline error
 
-M(Q) ~ exp(-γ) / log Q
+![Product baseline error](../figures/04_product_baseline_error.png)
+
+Error remains:
+
+- small  
+- structured  
+- bounded  
+
+Interpretation:
+
+> finite sieve correlations, not randomness
 
 ---
 
-## 9. Summary
+## 14. Core asymptotic result
 
-Finite sieve → asymptotic structure emerges:
+\[
+M(Q) \sim \frac{e^{-\gamma}}{\log Q}
+\]
+
+This includes:
+
+- correct scaling (\(1/\log Q\))  
+- correct constant (\(e^{-\gamma}\))  
+
+---
+
+## 15. Summary
+
+Finite sieve reveals asymptotic structure:
 
 - slope(Q) → 1  
 - residual(Q) → γ  
@@ -105,111 +220,14 @@ Finite sieve → asymptotic structure emerges:
 
 ---
 
-Constraint → signal > noise
+## 16. Clean takeaway
+
+> Multiplicative constraint filtering produces prime density through:
+>
+> - log-log scaling  
+> - constant offset convergence  
+> - structured (non-random) error
 
 ---
 
-# Sieve Constraints and Asymptotic Diagnostics (Notebook 04)
-
-## 1. Retention vs product baseline
-
-![Retention vs baseline](../figures/04_retention_vs_q.png)
-
-Observed retention closely follows the product baseline:
-
-M(Q) ≈ 1 / log Q
-
-Deviation remains small and structured.
-
----
-
-## 2. Log–log decay structure
-
-![Log-log decay](../figures/04_loglog_decay.png)
-
-We examine:
-
--log M(Q) vs log log Q
-
-This linearizes the asymptotic relation.
-
----
-
-## 3. Slope fit and theoretical comparison
-
-![Slope fit](../figures/04_loglog_fit.png)
-
-Fitted slope:
-
-slope ≈ 0.816 (finite Q)
-
-Theoretical asymptotic slope:
-
-slope → 1
-
-Interpretation:
-finite sieve depth underestimates asymptotic scaling.
-
----
-
-## 4. Slope vs max Q
-
-![Slope vs Q](../figures/04_slope_vs_Q.png)
-
-Slope increases monotonically with Q:
-
-~0.64 → ~0.82 → … → 1
-
----
-
-## 5. Residual definition
-
-R(Q) = -log M(Q) - log log Q
-
----
-
-## 6. Residual convergence
-
-![Residual vs Q](../figures/04_residual_vs_Q.png)
-
-Observations:
-
-- R(Q) stabilizes  
-- running mean smooths noise  
-- tail mean → constant ≈ 0.58  
-
-Matches:
-
--log M(Q) = log log Q + γ + o(1)
-
-γ ≈ 0.57721
-
----
-
-## 7. Convergence diagnostics
-
-Residual diagnostics confirm:
-
-- tail slope → 0  
-- variance → small  
-- range → bounded  
-
----
-
-## 8. Core result
-
-M(Q) ~ exp(-γ) / log Q
-
----
-
-## 9. Summary
-
-Finite sieve reveals asymptotic structure:
-
-- slope(Q) → 1  
-- residual(Q) → γ  
-- error(Q) bounded  
-
----
-
-Constraint → signal > noise
+**Constraint → signal > noise**
