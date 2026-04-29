@@ -1,0 +1,61 @@
+
+\section{Notebook 18: Spectral Memory and Low-Rank Operator Correction}
+
+Notebook 18 studies whether the two-step transition residual from the normalized
+prime-gap state process is low-rank.  Let
+\[
+z_n = \frac{p_{n+1}-p_n}{\log p_n}
+\]
+be the normalized prime gap, and let $s_n$ be a quantile-discretized state of
+$z_n$.  The first-order transition operator is
+\[
+P_{ij}=\Pr(s_{n+1}=j\mid s_n=i),
+\]
+and the empirical two-step operator is
+\[
+P^{(2)}_{ik}=\Pr(s_{n+2}=k\mid s_n=i).
+\]
+The Markov prediction is $\widehat{P}^{(2)}=P^2$, so the two-step memory
+residual is
+\[
+M=P^{(2)}-P^2.
+\]
+We decompose this residual as
+\[
+M=U\Sigma V^\top
+\]
+and define a rank-$k$ correction
+\[
+P^{(2)}_k=P^2+U_k\Sigma_kV_k^\top.
+\]
+
+For this run, the Markov $L_2$ error is
+\[
+0.00793828,
+\]
+while the rank-4 corrected $L_2$ error is
+\[
+0.00124468.
+\]
+The rank-4 correction reduces error by
+\[
+0.843205.
+\]
+The leading singular mode accounts for energy share
+\[
+0.557366,
+\]
+and the rank needed to capture 90\% of residual energy is
+\[
+3.
+\]
+A shuffle baseline gives mean top singular value
+\[
+0.0113954,
+\]
+compared with the real top singular value
+\[
+0.0474118.
+\]
+These diagnostics test whether higher-order transition memory is structured as a
+small number of spectral modes rather than spread uniformly across transitions.
