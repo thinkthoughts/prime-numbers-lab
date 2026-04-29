@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Gap Distribution Residual Structure}
+
+\subsection*{Normalized gap}
+
+\[
+z_n = \frac{p_{n+1}-p_n}{\log p_n}
+\]
+
+\subsection*{Exponential baseline}
+
+\[
+f_0(z)=e^{-z}, \quad z\ge 0
+\]
+
+\subsection*{Residual}
+
+\[
+\Delta(z,x)=f_{emp}(z,x)-f_0(z)
+\]
+
+\subsection*{Residual norms}
+
+\[
+\|\Delta\|_1 = \int |\Delta(z,x)|\,dz
+\]
+
+\[
+\|\Delta\|_2 = \left(\int \Delta(z,x)^2\,dz\right)^{1/2}
+\]
+
+\subsection*{Jensen--Shannon divergence}
+
+\[
+JS(P,Q)=\frac12 KL(P\|M)+\frac12 KL(Q\|M)
+\]
+
+where:
+
+\[
+M=\frac12(P+Q)
+\]
+
+\subsection*{Residual CGCS score}
+
+\[
+CGCS_\Delta =
+\frac{1}{1+\overline{\|\Delta\|_1}+\overline{JS}}
+\]
+
+\subsection*{Interpretation}
+
+Structure remains under constraint when normalized gaps retain an exponential envelope while residual deviations become measurable, bounded, and comparable across scale.
+
+\end{document}

@@ -1,0 +1,23 @@
+\section*{Gap Distribution Residual Structure}
+
+This notebook measures residual structure after comparing normalized prime gaps to the exponential baseline.
+
+\[
+z = \frac{p_{n+1}-p_n}{\log p_n}
+\]
+
+\[
+\Delta(z,x)=f_{emp}(z,x)-e^{-z}
+\]
+
+\begin{itemize}
+  \item Windows used: 12
+  \item Mean residual $L_1$: 1.051746
+  \item Final residual $L_1$: 0.925666
+  \item Mean JS divergence: 0.233121
+  \item Final JS divergence: 0.189657
+  \item Mean tail bias for $z\ge3$: -0.020848
+  \item CGCS residual score: 0.437662
+\end{itemize}
+
+The residual is treated as a measurable correction to the exponential heuristic, not as noise to ignore.
