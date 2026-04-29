@@ -32,6 +32,7 @@ The notebook computes:
 7. log-product decay
 8. log-log comparison
 9. product-baseline error
+10. log-log slope fit and theoretical slope-1 overlay
 
 ## CGCS score
 
@@ -46,7 +47,8 @@ Expected result: exactly 1.0.
 3. retention and drift by layer
 4. observed retention versus product baseline
 5. log-product decay versus log-log scale
-6. product-baseline error
+6. fitted log-log overlay
+7. product-baseline error
 
 ## Recoverability
 

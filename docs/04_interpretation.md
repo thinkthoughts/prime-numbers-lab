@@ -31,6 +31,9 @@ M(Q) = product_{q <= Q}(1 - 1/q).
 - final log-product decay = 2.393204
 - final decay error = 0.015626
 - correlation between log-product decay and log log q = 0.996045
+- log-log fit slope = 0.815598
+- log-log fit intercept = 0.898800
+- log-log fit R^2 = 0.992105
 
 ## CGCS score
 
@@ -75,8 +78,12 @@ This notebook demonstrates finite exact recovery by the classical sieve. It does
 
 ![Figure 5](../figures/04_log_product_vs_loglog.png)
 
-### Figure 6 — Product-baseline error
+### Figure 6 — Fitted log-log overlay
 
-![Figure 6](../figures/04_product_baseline_error.png)
+![Figure 6](../figures/04_loglog_fit_overlay.png)
+
+### Figure 7 — Product-baseline error
+
+![Figure 7](../figures/04_product_baseline_error.png)
 
 
