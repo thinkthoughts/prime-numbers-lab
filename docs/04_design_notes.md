@@ -34,6 +34,7 @@ The notebook computes:
 9. product-baseline error
 10. log-log slope fit and theoretical slope-1 overlay
 11. slope versus max Q experiment
+12. residual convergence-to-constant diagnostics
 
 ## CGCS score
 
@@ -50,7 +51,8 @@ Expected result: exactly 1.0.
 5. log-product decay versus log-log scale
 6. fitted log-log overlay
 7. slope versus max Q
-8. product-baseline error
+8. residual versus max Q
+9. product-baseline error
 
 ## Recoverability
 

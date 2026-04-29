@@ -38,6 +38,18 @@ M(Q) = product_{q <= Q}(1 - 1/q).
 - final prefix slope gap to 1 = 0.184402
 - final prefix R^2 = 0.992105
 
+## Residual analysis
+
+Residual diagnostic: R(Q) = -log M(Q) - log log Q.
+
+- tail residual mean = 0.585803
+- tail residual std = 0.001542
+- tail residual range = 0.006826
+- tail residual slope vs log log Q = -0.054571
+- convergence-to-constant score = 0.940788
+
+A flatter residual tail supports the interpretation that the finite product model is moving toward a constant-corrected log-log regime.
+
 ## CGCS score
 
 CGCS_sieve = |S_final ∩ P_N| / |P_N|.
@@ -93,8 +105,12 @@ This notebook demonstrates finite exact recovery by the classical sieve. It does
 
 ![Figure 7](../figures/04_slope_vs_max_q.png)
 
-### Figure 8 — Product-baseline error
+### Figure 8 — Residual versus max Q
 
-![Figure 8](../figures/04_product_baseline_error.png)
+![Figure 8](../figures/04_residual_vs_max_q.png)
+
+### Figure 9 — Product-baseline error
+
+![Figure 9](../figures/04_product_baseline_error.png)
 
 
