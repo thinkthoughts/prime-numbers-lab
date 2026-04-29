@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Windowed Reconstruction Stability}
+
+\subsection*{Window}
+\[W=[a,b].\]
+
+\subsection*{Window density error}
+\[
+d(W)=\frac{||\hat{P}\cap W|-|P\cap W||}{|P\cap W|}.
+\]
+
+\subsection*{Window precision}
+\[
+precision(W)=\frac{|\hat{P}\cap P\cap W|}{|\hat{P}\cap W|}.
+\]
+
+\subsection*{Window recovery}
+\[
+recovery(W)=\frac{|\hat{P}\cap P\cap W|}{|P\cap W|}.
+\]
+
+\subsection*{Window gap drift}
+\[
+g(W)=\operatorname{mean}_{p_i\in W}
+\frac{|(p_{i+1}-p_i)-\log p_i|}{\log p_i}.
+\]
+
+\subsection*{Windowed stability score}
+\[
+CGCS_{\mathrm{window}}=
+\frac{1}{1+\overline{d(W)}+\overline{g(W)}}.
+\]
+
+\end{document}

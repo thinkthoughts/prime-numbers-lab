@@ -1,0 +1,25 @@
+\section*{Windowed Reconstruction Stability}
+
+This notebook evaluates reconstruction stability across sliding windows.
+
+For a window $W=[a,b]$, local density error is
+\[
+d(W)=\frac{||\hat{P}\cap W|-|P\cap W||}{|P\cap W|}.
+\]
+
+Local gap drift is
+\[
+g(W)=\operatorname{mean}_{p_i\in W}
+\frac{|(p_{i+1}-p_i)-\log p_i|}{\log p_i}.
+\]
+
+For $N=200,000$ with window width $10,000$ and step $5,000$:
+\begin{itemize}
+  \item mean density-only window density error $= 0.008987$
+  \item mean local-gap window density error $= 0.009108$
+  \item mean density-only window gap drift $= 0.588846$
+  \item mean local-gap window gap drift $= 0.585316$
+  \item CGCS windowed stability score $= 0.627186$
+\end{itemize}
+
+Global reconstruction can look successful while local windows expose density, gap, and stability failures.
