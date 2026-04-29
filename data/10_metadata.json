@@ -1,0 +1,111 @@
+{
+  "params": {
+    "N_MAX": 200000,
+    "RANDOM_SEED": 9423,
+    "SCENARIOS": [
+      {
+        "name": "mixed_keep_75_noise_25",
+        "kind": "mixed",
+        "keep_fraction": 0.75,
+        "noise_fraction": 0.25
+      },
+      {
+        "name": "mixed_keep_50_noise_50",
+        "kind": "mixed",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "mixed_keep_25_noise_100",
+        "kind": "mixed",
+        "keep_fraction": 0.25,
+        "noise_fraction": 1.0
+      },
+      {
+        "name": "biased_low_missing_high_noise",
+        "kind": "biased_range",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "adversarial_mod6_noise_50",
+        "kind": "adversarial_mod6",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "adversarial_mod6_noise_100",
+        "kind": "adversarial_mod6",
+        "keep_fraction": 0.25,
+        "noise_fraction": 1.0
+      }
+    ],
+    "Q_FILTER": 447,
+    "COMPLETION_BIN_COUNT": 32,
+    "BASE_W_DENSITY": 0.45,
+    "BASE_W_GAP": 0.4,
+    "BASE_W_NEIGHBOR": 0.15,
+    "LAMBDA_ADAPT": 1.75,
+    "INSTABILITY_ALPHA_DENSITY": 0.45,
+    "INSTABILITY_BETA_GAP": 0.55,
+    "MAX_GAP_WEIGHT_MULTIPLIER": 3.0,
+    "MIN_DENSITY_WEIGHT_MULTIPLIER": 0.25,
+    "WINDOW_WIDTH": 10000,
+    "WINDOW_STEP": 5000,
+    "WINDOW_COUNT": 40,
+    "NOTEBOOK_ID": "10_adaptive_window_reconstruction",
+    "NOTEBOOK_TITLE": "Adaptive Window Reconstruction"
+  },
+  "summary": {
+    "n_max": 200000,
+    "prime_count": 17984,
+    "composite_count": 182015,
+    "mod6_composite_count": 48684,
+    "scenario_count": 6,
+    "window_count": 40
+  },
+  "measurement": {
+    "mean_density_error_density_only": 0.008987130752466798,
+    "mean_density_error_local_gap_fixed": 0.00910768815544717,
+    "mean_density_error_adaptive_window": 0.009110690297208702,
+    "mean_gap_drift_density_only": 0.5888368562879972,
+    "mean_gap_drift_local_gap_fixed": 0.5853161328487455,
+    "mean_gap_drift_adaptive_window": 0.5883352548598858,
+    "mean_delta_adaptive_minus_fixed_gap_drift": 0.0030191220111404258,
+    "mean_delta_adaptive_minus_density_gap_drift": -0.0005016014281113238,
+    "mean_adaptive_gap_weight": 0.5899841048268644,
+    "mean_adaptive_density_weight": 0.2691393136800445
+  },
+  "cgcs": {
+    "score": 0.6259992727964633,
+    "definition": "adaptive stability score = 1/(1 + mean density error + mean gap drift) for adaptive window reconstruction",
+    "interpretation": "Higher score means better adaptive local density and gap stability."
+  },
+  "figures": [
+    "10_adaptive_window_reconstruction/figures/10_adaptive_weights_by_window.png",
+    "10_adaptive_window_reconstruction/figures/10_window_instability_profile.png",
+    "10_adaptive_window_reconstruction/figures/10_method_density_error.png",
+    "10_adaptive_window_reconstruction/figures/10_method_gap_drift.png",
+    "10_adaptive_window_reconstruction/figures/10_adaptive_delta_gap_drift.png",
+    "10_adaptive_window_reconstruction/figures/10_unstable_windows_comparison.png",
+    "10_adaptive_window_reconstruction/figures/10_gap_profile_adversarial.png",
+    "10_adaptive_window_reconstruction/figures/10_stability_map_adaptive.png",
+    "10_adaptive_window_reconstruction/figures/10_mean_window_f1_by_method.png"
+  ],
+  "data": {
+    "summary": "10_adaptive_window_reconstruction/data/10_summary.csv",
+    "window_metrics": "10_adaptive_window_reconstruction/data/10_window_metrics.csv",
+    "method_summary": "10_adaptive_window_reconstruction/data/10_method_summary.csv",
+    "adaptive_weights": "10_adaptive_window_reconstruction/data/10_adaptive_weights.csv",
+    "method_deltas": "10_adaptive_window_reconstruction/data/10_method_deltas.csv",
+    "candidate_completions": "10_adaptive_window_reconstruction/data/10_candidate_completions.csv"
+  },
+  "docs": {
+    "interpretation": "10_adaptive_window_reconstruction/docs/10_interpretation.md",
+    "design_notes": "10_adaptive_window_reconstruction/docs/10_design_notes.md"
+  },
+  "tex": {
+    "summary_snippet": "10_adaptive_window_reconstruction/tex/10_summary_snippet.tex",
+    "math_notes": "10_adaptive_window_reconstruction/tex/10_math_notes.tex"
+  }
+}
