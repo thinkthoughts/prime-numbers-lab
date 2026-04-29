@@ -56,20 +56,20 @@
     "interpretation": "1.0 means all primes greater than 3 remain under the mod 6 residue constraint."
   },
   "figures": [
-    "outputs/01_residue_classes_mod6/figures/residue_distribution_mod6.png",
-    "outputs/01_residue_classes_mod6/figures/cgcs_and_drift_by_scale_mod6.png"
+    "01_residue_classes_mod6/figures/01_residue_distribution_mod6.png",
+    "01_residue_classes_mod6/figures/01_cgcs_and_drift_by_scale_mod6.png"
   ],
   "data": {
-    "summary": "outputs/01_residue_classes_mod6/data/summary.csv",
-    "residue_counts": "outputs/01_residue_classes_mod6/data/residue_counts.csv",
-    "scale_scores": "outputs/01_residue_classes_mod6/data/scale_scores.csv"
+    "summary": "01_residue_classes_mod6/data/01_summary.csv",
+    "residue_counts": "01_residue_classes_mod6/data/01_residue_counts.csv",
+    "scale_scores": "01_residue_classes_mod6/data/01_scale_scores.csv"
   },
   "docs": {
-    "interpretation": "outputs/01_residue_classes_mod6/docs/interpretation.md",
-    "design_notes": "outputs/01_residue_classes_mod6/docs/design_notes.md"
+    "interpretation": "01_residue_classes_mod6/docs/01_interpretation.md",
+    "design_notes": "01_residue_classes_mod6/docs/01_design_notes.md"
   },
   "tex": {
-    "summary_snippet": "outputs/01_residue_classes_mod6/tex/summary_snippet.tex",
-    "math_notes": "outputs/01_residue_classes_mod6/tex/math_notes.tex"
+    "summary_snippet": "01_residue_classes_mod6/tex/01_summary_snippet.tex",
+    "math_notes": "01_residue_classes_mod6/tex/01_math_notes.tex"
   }
 }
