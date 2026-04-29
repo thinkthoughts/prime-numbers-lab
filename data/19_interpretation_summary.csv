@@ -1,0 +1,2 @@
+notebook_id,delta_frobenius,rank_for_90_energy,rank_for_95_energy,markov_P2_l2_error,rank4_l2_error,rank4_l2_reduction_ratio,best_generated_model_by_two_step_l1,best_generated_two_step_l1_error
+19_operator_dynamics_validation,0.06678632496563655,4,5,0.008348290620704569,0.002162801216359318,0.7409288542261141,markov_P,0.006437933489162273

@@ -1,0 +1,2 @@
+notebook_id,max_n,num_primes_gt_5,num_states,first_prime,last_prime,residues,rng_seed
+19_operator_dynamics_validation,2000000,148930,148930,7,1999993,1 7 11 13 17 19 23 29,9423
