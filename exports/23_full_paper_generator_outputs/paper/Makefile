@@ -1,12 +1,12 @@
-PDF=main.pdf
-TEX=main.tex
+.PHONY: all clean
+
 all:
-	latexmk -pdf $(TEX)
-pdflatex:
-	pdflatex $(TEX)
-	bibtex main || true
-	pdflatex $(TEX)
-	pdflatex $(TEX)
+	latexmk -pdf main.tex
+
+fallback:
+	pdflatex main.tex
+	pdflatex main.tex
+
 clean:
-	latexmk -C
-	rm -f *.aux *.bbl *.blg *.log *.out *.toc *.fls *.fdb_latexmk
+	latexmk -c
+	rm -f *.aux *.log *.out *.toc *.fls *.fdb_latexmk *.bbl *.blg
