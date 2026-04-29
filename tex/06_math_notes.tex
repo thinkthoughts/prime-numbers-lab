@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Recoverability Under Partial Observation}
+
+\subsection*{Prime set}
+
+\[
+P_N = \{p : p \le N\}.
+\]
+
+\subsection*{Recovery}
+
+\[
+CGCS_{\mathrm{recovery}}(S)=
+\frac{|S \cap P_N|}{|P_N|}.
+\]
+
+\subsection*{Precision}
+
+\[
+precision(S)=
+\frac{|S \cap P_N|}{|S|}.
+\]
+
+\subsection*{Mod 6 score}
+
+\[
+CGCS_{\mathrm{mod6}}(S)=
+\frac{|\{n\in S:n\equiv 1,5\pmod6\}|}{|S_{>3}|}.
+\]
+
+\subsection*{Density drift}
+
+\[
+drift_{\mathrm{density}}(S)=
+\operatorname{mean}_x
+\frac{||S\cap[2,x]|-\pi(x)|}{\pi(x)}.
+\]
+
+\subsection*{Sieve-consistency}
+
+\[
+CGCS_{\mathrm{sieve}}(S)=
+\frac{|\{n\in S:n\text{ passes prime divisibility tests}\}|}{|S|}.
+\]
+
+\end{document}

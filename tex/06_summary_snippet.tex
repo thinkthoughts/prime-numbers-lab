@@ -1,0 +1,25 @@
+\section*{Recoverability Under Partial Observation}
+
+This notebook corrupts prime observations and measures which constraint signals remain recoverable.
+
+The recovery score is
+\[
+CGCS_{\mathrm{recovery}}(S)=
+\frac{|S\cap P_N|}{|P_N|}.
+\]
+
+The precision score is
+\[
+precision(S)=
+\frac{|S\cap P_N|}{|S|}.
+\]
+
+For $N=200,000$:
+\begin{itemize}
+  \item baseline recovery $= 1.000000$
+  \item baseline precision $= 1.000000$
+  \item worst mixed recovery $= 0.250000$
+  \item worst mixed precision $= 0.200000$
+\end{itemize}
+
+Constraint structure remains detectable after corruption.
