@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Residue Classes mod 6}
+
+\subsection*{Residue classes}
+
+Every integer has one residue modulo 6:
+\[
+n \equiv 0,1,2,3,4,5 \pmod{6}.
+\]
+
+\subsection*{Prime residue constraint}
+
+For every prime greater than 3:
+\[
+p > 3 \Rightarrow p \equiv \pm 1 \pmod{6}.
+\]
+
+Equivalently:
+\[
+p > 3 \Rightarrow p \equiv 1 \text{ or } 5 \pmod{6}.
+\]
+
+\subsection*{Necessary but not sufficient}
+
+The residue constraint is necessary:
+\[
+p>3 \Rightarrow p \equiv \pm 1 \pmod{6}.
+\]
+
+It is not sufficient:
+\[
+n \equiv \pm 1 \pmod{6} \nRightarrow n \text{ is prime}.
+\]
+
+\subsection*{CGCS score}
+
+For this notebook:
+\[
+CGCS_{mod6} =
+\frac{\#\{p>3 : p \equiv 1,5 \pmod{6}\}}
+{\#\{p>3\}}.
+\]
+
+Measured result:
+\[
+CGCS_{mod6} = 1.000000.
+\]
+
+\subsection*{Drift}
+
+\[
+drift_{mod6} = 1 - CGCS_{mod6}.
+\]
+
+Measured result:
+\[
+drift_{mod6} = 0.000000.
+\]
+
+\subsection*{Recoverability}
+
+Modulo 6 recovers candidate residue classes:
+\[
+n \equiv \pm 1 \pmod{6}.
+\]
+
+It does not recover prime identity exactly.
+
+\end{document}
