@@ -1,11 +1,13 @@
-Prime gaps are often studied through their sizes, asymptotic behavior, and distributional regularities. A complementary finite-computational view is to track the residue classes of consecutive primes after removing the smallest prime divisibility constraints. For primes greater than 5, residues modulo 30 lie in
-\[
-R=\{1,7,11,13,17,19,23,29\}.
-\]
-This gives an eight-state transition system. A first-order Markov model is a natural baseline because it records the observed probabilities of moving from one residue class to the next. However, first-order transitions need not capture memory that appears over two or more steps. This paper asks whether the empirical two-step residue transition operator contains structure beyond the first-order Markov prediction.
+\section{Introduction}
 
-The central diagnostic is the residual operator
+Prime gaps exhibit both regular arithmetic constraints and irregular statistical behavior. Consecutive primes greater than $5$ lie in the residue classes
 \[
-\Delta=P^{(2)}-P^2,
+R=\{1,7,11,13,17,19,23,29\}\pmod{30}.
 \]
-where \(P^{(2)}\) is the empirical two-step transition operator and \(P^2\) is the two-step prediction implied by the first-order operator. If the residue process were adequately described by \(P\), this residual would be small and structureless up to finite-sample effects. Instead, the notebooks summarized here identify stable low-rank components in \(\Delta\), validate them against synthetic controls, and package the results for reproducible inspection.
+This finite residue structure provides a natural setting for empirical transition analysis. Rather than treating prime gaps only through scalar gap sizes, we study transitions among residue classes as a finite computational dynamical system.
+
+The first-order transition operator $P$ gives a Markov baseline for consecutive residue changes. If first-order dynamics fully explain the observed sequence, the empirical two-step operator $P^{(2)}$ should be close to $P^2$. Deviations from this baseline define a residual operator
+\[
+\Delta = P^{(2)}-P^2.
+\]
+The central question of this paper is whether $\Delta$ behaves like sampling noise or exhibits structured, statistically validated memory.

@@ -1,21 +1,28 @@
-Let \(r_n\in R\) denote the residue class modulo 30 of the \(n\)-th prime greater than 5. We define the first-order transition operator
+\section{Methods}
+
+Let $p_n$ denote the $n$th prime and define the residue state
 \[
-P_{ij}=\Pr(r_{n+1}=j\mid r_n=i),
+r_n = p_n \bmod 30,
 \]
-and the empirical two-step operator
+restricted to the eight residue classes coprime to $30$. The empirical first-order transition operator is
+\[
+P_{ij}=\Pr(r_{n+1}=j\mid r_n=i).
+\]
+The empirical two-step operator is
 \[
 P^{(2)}_{ik}=\Pr(r_{n+2}=k\mid r_n=i).
 \]
-The first-order Markov baseline predicts two-step transitions as
+The first-order Markov prediction is $(P^2)_{ik}$, and the higher-order residual is
 \[
-(P^2)_{ik}=\sum_j P_{ij}P_{jk}.
+\Delta_{ik}=P^{(2)}_{ik}-(P^2)_{ik}.
 \]
-The higher-order residual is then
+
+We analyze $\Delta$ using singular value decomposition,
 \[
-\Delta=P^{(2)}-P^2.
+\Delta=\sum_{\ell=1}^{8}\sigma_\ell u_\ell v_\ell^\top,
 \]
-We analyze \(\Delta\) using the singular value decomposition
+and evaluate low-rank reconstructions
 \[
-\Delta=\sum_{\ell=1}^{8}\sigma_\ell u_\ell v_\ell^\top.
+\Delta_k=\sum_{\ell=1}^{k}\sigma_\ell u_\ell v_\ell^\top.
 \]
-Low-rank approximations retain the first \(k\) singular modes and compare prediction error as a function of \(k\). To evaluate whether the residual is a sampling artifact, we compare the real sequence to iid shuffles, Markov synthetic sequences generated from \(P\), block shuffles, residue-balanced shuffles, and gap-shuffle controls. Statistical validation uses null ensembles, block/window bootstrap, confidence bands, rank-stability diagnostics, and p-value summaries.
+Synthetic controls include i.i.d.\ shuffles, Markov-generated sequences, block shuffles, balanced shuffles, and gap-based shuffles. Validation metrics include residual norms, singular spectra, rank requirements, mutual information, p-values against empirical nulls, and windowed stability.
