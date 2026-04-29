@@ -1,0 +1,2 @@
+real_frobenius_residual,shuffle_mean_frobenius_residual,shuffle_std_frobenius_residual,real_top_singular_value,shuffle_mean_top_singular_value,shuffle_std_top_singular_value,real_rank90,real_rank95,shuffle_mean_rank90,shuffle_mean_rank95
+0.0635062336608021,0.017528235669428356,0.0017584947568745298,0.047411822425005586,0.011395431767783109,0.0014791560189371586,3,3,4.0,4.703125

@@ -1,0 +1,2 @@
+notebook_id,x_max,prime_count,gap_count_used,p_min,p_max,mean_gap,mean_logp,mean_normalized_gap_z,std_normalized_gap_z,n_states,seed
+18_spectral_memory_low_rank_operator,2000000,148933,148907,101,1999979,13.430476740515893,13.421058009983756,1.0007916419533986,0.8122774982702096,8,9423
