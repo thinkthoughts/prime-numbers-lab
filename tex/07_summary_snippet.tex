@@ -1,0 +1,32 @@
+\section*{Constraint Reconstruction}
+
+This notebook reconstructs candidate prime structure from corrupted observations and stress tests global density reconstruction.
+
+Precision and recovery are defined by
+\[
+precision = \frac{|\hat{P}_N\cap P_N|}{|\hat{P}_N|},
+\qquad
+recovery = \frac{|\hat{P}_N\cap P_N|}{|P_N|}.
+\]
+
+The $F_1$ score is
+\[
+F_1 = \frac{2\cdot precision\cdot recovery}{precision+recovery}.
+\]
+
+Gap drift is approximated by
+\[
+drift_{\mathrm{gap}}=\operatorname{mean}_i \frac{|g_i-\log p_i|}{\log p_i}.
+\]
+
+For $N=200,000$:
+\begin{itemize}
+  \item mean raw precision $= 0.441667$
+  \item mean sieve-filter precision $= 1.000000$
+  \item mean reconstruction recovery $= 0.990881$
+  \item mean reconstruction precision $= 1.000000$
+  \item mean reconstruction $F_1 = 0.995420$
+  \item mean reconstruction gap drift $= 0.587789$
+\end{itemize}
+
+Filtering restores precision; reconstruction trades precision for recovery.
