@@ -155,6 +155,15 @@
     "definition": "precision \u00d7 recall against reference prime set",
     "note": "full sieve recovers prime identity exactly up to N when all prime filters q <= sqrt(N) are applied"
   },
+  "asymptotic_diagnostics": {
+    "tail_residual_mean": 0.5858028410671093,
+    "tail_residual_std": 0.0015424275007157652,
+    "tail_residual_range": 0.006825546063047305,
+    "tail_residual_slope_vs_loglog_q": -0.05457116046320247,
+    "tail_residual_intercept": 0.6830096143570653,
+    "convergence_to_constant_score": 0.94078764059752,
+    "definition": "higher is better; 1/(1 + |tail slope| + tail std + tail range)"
+  },
   "cgcs": {
     "score": 1.0,
     "definition": "CGCS_sieve = |S_final \u2229 P_N| / |P_N| after filters q <= sqrt(N)",
@@ -168,13 +177,15 @@
     "04_sieve_constraints/figures/04_log_product_vs_loglog.png",
     "04_sieve_constraints/figures/04_loglog_fit_overlay.png",
     "04_sieve_constraints/figures/04_slope_vs_max_q.png",
+    "04_sieve_constraints/figures/04_residual_vs_max_q.png",
     "04_sieve_constraints/figures/04_product_baseline_error.png"
   ],
   "data": {
     "summary": "04_sieve_constraints/data/04_summary.csv",
     "sieve_layers": "04_sieve_constraints/data/04_sieve_layers.csv",
     "sieve_primes": "04_sieve_constraints/data/04_sieve_primes.csv",
-    "slope_vs_max_q": "04_sieve_constraints/data/04_slope_vs_max_q.csv"
+    "slope_vs_max_q": "04_sieve_constraints/data/04_slope_vs_max_q.csv",
+    "residual_diagnostics": "04_sieve_constraints/data/04_residual_diagnostics.csv"
   },
   "docs": {
     "interpretation": "04_sieve_constraints/docs/04_interpretation.md",
