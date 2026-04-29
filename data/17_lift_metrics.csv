@@ -1,0 +1,2 @@
+real_two_step_l2_delta,shuffle_mean_two_step_l2_delta,shuffle_std_two_step_l2_delta,real_minus_shuffle_mean_abs,real_minus_shuffle_l2,real_over_shuffle_max_lift
+0.007938279207600263,0.0021910294586785445,0.00021981184460931623,0.006085163221147539,0.008400105509059147,1.204019475590505
