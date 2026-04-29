@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Prime Gaps}
+
+\subsection*{Prime gap definition}
+
+Let $p_n$ denote the $n$-th prime. Define
+\[
+g_n = p_{n+1} - p_n.
+\]
+
+\subsection*{Logarithmic scale baseline}
+
+The coarse expected gap scale near $p_n$ is
+\[
+\mathbb{E}[g_n] \approx \log(p_n).
+\]
+
+\subsection*{Drift}
+
+This notebook measures relative drift by
+\[
+drift_n =
+\frac{|g_n - \log(p_n)|}{\log(p_n)}.
+\]
+
+\subsection*{CGCS score}
+
+For gaps with $p_n \ge 100$:
+\[
+CGCS_{gap} =
+\frac{1}{1 + \frac{1}{N}\sum_n drift_n}.
+\]
+
+Measured value:
+\[
+CGCS_{gap} = 0.625118.
+\]
+
+\subsection*{Recoverability}
+
+The logarithmic baseline partially recovers coarse gap scale:
+\[
+\overline{g}_{\mathrm{bin}} \approx \overline{\log(p_n)}_{\mathrm{bin}}.
+\]
+
+It does not recover exact gaps:
+\[
+g_n \ne \log(p_n)
+\]
+in general.
+
+\end{document}

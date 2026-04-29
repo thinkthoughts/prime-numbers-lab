@@ -1,0 +1,20 @@
+\section*{Prime Gaps}
+
+This notebook studies prime gaps
+\[
+g_n = p_{n+1} - p_n
+\]
+and compares them to the logarithmic scale baseline
+\[
+\mathbb{E}[g_n] \approx \log(p_n).
+\]
+
+For primes below 1,000,000, using gaps with $p_n \ge 100$:
+\begin{itemize}
+  \item mean gap $= 12.741895$
+  \item mean $\log(p_n) = 12.722839$
+  \item mean relative drift $= 0.599699$
+  \item $CGCS_{gap} = 0.625118$
+\end{itemize}
+
+Logarithmic scaling recovers coarse gap scale, not exact gaps.
