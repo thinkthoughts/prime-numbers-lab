@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\title{Notebook 11: Learned Gap Model}
+\author{prime-numbers-lab}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Purpose}
+Notebook 11 tests whether replacing the baseline expected prime gap model
+\[
+  g(x) \approx \log x
+\]
+with learned deterministic alternatives materially improves reconstruction diagnostics.
+
+\section*{Models}
+The notebook compares five expected-gap models:
+\begin{itemize}
+  \item log baseline: $g(x)=\log x$
+  \item affine log: $g(x)=a\log x+b$
+  \item sinusoidal log correction: $g(x)=\log x + A\sin(k\log x)+B\cos(k\log x)+c$
+  \item local rolling residual correction
+  \item combined sinusoidal plus local residual correction
+\end{itemize}
+
+\section*{Primary diagnostics}
+The primary diagnostics are global RMSE/MAE and windowed residual drift.
+The best model is \texttt{local_rolling} with RMSE 10.224070.
+The log-baseline RMSE is 10.225042.
+The best RMSE improvement versus log baseline is 0.0095%.
+
+\section*{Figures}
+\begin{itemize}
+  \item \texttt{figures/11\_gap\_model\_rmse.png}
+  \item \texttt{figures/11\_gap\_model\_mae.png}
+  \item \texttt{figures/11\_expected\_gap\_curves.png}
+  \item \texttt{figures/11\_window\_relative\_residual\_drift.png}
+  \item \texttt{figures/11\_window\_mean\_residual.png}
+  \item \texttt{figures/11\_rmse\_improvement\_vs\_log.png}
+\end{itemize}
+
+\section*{Interpretation}
+At this scale, deterministic expected-gap refinements produce only tiny improvements over
+$\log x$. This indicates that residual gap error is dominated more by distributional
+variance than by a smooth mean-model bias.
+
+\section*{Next step}
+Notebook 12 should model
+\[
+  P(g\mid x)
+\]
+rather than only a point estimate $\hat g(x)$.
+
+\section*{Constraint}
+\[
+\text{Constraint} \rightarrow \text{signal} > \text{noise}
+\]
+
+\end{document}
