@@ -15,6 +15,23 @@ Values that remain after all divisibility filters match the reference prime set.
 
 Composite multiples drift out layer by layer. Early filters remove the largest number of candidates.
 
+Drift accumulates monotonically as composite structure is removed, while retention converges toward the prime density scale.
+
+## Product baseline and error tracking
+
+The cumulative product baseline compares observed retention with an idealized independent-filter model:
+
+M(Q) = product_{q <= Q}(1 - 1/q).
+
+- final observed retention = 0.089920
+- final product baseline = 0.091337
+- final retention minus product baseline = -0.001416
+- mean absolute product-baseline error = 0.002341
+- final observed decay = 2.408830
+- final log-product decay = 2.393204
+- final decay error = 0.015626
+- correlation between log-product decay and log log q = 0.996045
+
 ## CGCS score
 
 CGCS_sieve = |S_final ∩ P_N| / |P_N|.
@@ -28,7 +45,11 @@ CGCS_sieve = |S_final ∩ P_N| / |P_N|.
 
 The full sieve recovers prime identity exactly up to N when all prime filters q <= sqrt(N) are applied.
 
+Exact recovery holds because the sieve encodes all divisibility constraints needed to certify primality below N.
+
 ## Caution
+
+The product model provides a first-order density approximation, but finite sieve behavior includes correlation effects not captured by independence.
 
 This notebook demonstrates finite exact recovery by the classical sieve. It does not claim a new primality theorem.
 
@@ -45,5 +66,17 @@ This notebook demonstrates finite exact recovery by the classical sieve. It does
 ### Figure 3 — Retention and drift by layer
 
 ![Figure 3](../figures/04_retention_and_drift_by_layer.png)
+
+### Figure 4 — Observed retention versus product baseline
+
+![Figure 4](../figures/04_retention_vs_product_baseline.png)
+
+### Figure 5 — Log-product decay versus log-log scale
+
+![Figure 5](../figures/04_log_product_vs_loglog.png)
+
+### Figure 6 — Product-baseline error
+
+![Figure 6](../figures/04_product_baseline_error.png)
 
 

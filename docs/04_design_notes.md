@@ -9,6 +9,10 @@ Notebook 02 measured gap structure.
 Notebook 03 measured density scale.
 Notebook 04 measures layered sieve filtering.
 
+## Upgrade in v4
+
+This version includes cumulative product baseline, log-product / log-log tracking, and product-baseline error tracking.
+
 ## Constraint
 
 Each layer removes composite multiples of a prime filter q:
@@ -23,7 +27,11 @@ The notebook computes:
 2. removed candidate count by filter
 3. retention share
 4. drift share
-5. exact recovery against the reference prime set
+5. product-model baseline
+6. exact recovery against the reference prime set
+7. log-product decay
+8. log-log comparison
+9. product-baseline error
 
 ## CGCS score
 
@@ -36,6 +44,9 @@ Expected result: exactly 1.0.
 1. retained candidates by sieve layer
 2. removed candidates by prime filter
 3. retention and drift by layer
+4. observed retention versus product baseline
+5. log-product decay versus log-log scale
+6. product-baseline error
 
 ## Recoverability
 
