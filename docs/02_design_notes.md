@@ -16,8 +16,6 @@ E[g_n] approximately log(p_n)
 
 ## Measurement
 
-The notebook computes:
-
 1. all prime gaps below N_MAX
 2. gap statistics
 3. relative drift from log(p_n)
@@ -28,17 +26,11 @@ The notebook computes:
 
 CGCS_gap_logscale = 1 / (1 + mean(|g_n - log(p_n)| / log(p_n)))
 
-computed for p_n >= 100.
+## Figures
 
-## Drift
-
-drift_n = |g_n - log(p_n)| / log(p_n)
-
-This makes drift continuous rather than binary.
-
-## Recoverability
-
-Log scaling recovers coarse gap scale, not exact gap identity.
+1. gap histogram
+2. gaps versus logarithmic baseline
+3. mean gap versus logarithmic scale by bin
 
 ## Handoff
 

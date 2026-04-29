@@ -32,14 +32,28 @@ Drift was measured as |g_n - log(p_n)| / log(p_n).
 
 CGCS_gap_logscale = 1 / (1 + mean relative drift)
 
-Measured score:
-
 - CGCS_gap_logscale = 0.625118
 
 ## Recoverability
 
-The logarithmic baseline recovers coarse gap scale, especially in aggregate windows. It does not recover exact gaps.
+The logarithmic baseline recovers coarse gap scale in aggregate windows. It does not recover exact gaps.
 
 ## Caution
 
-This notebook does not solve prime gaps, prove RH, or claim exact predictability. It measures gap structure and drift relative to a classical scale baseline.
+This notebook does not solve prime gaps, prove RH, or claim exact predictability.
+
+## Figures
+
+### Figure 1 — Gap histogram
+
+![Figure 1](../figures/02_gap_histogram.png)
+
+### Figure 2 — Gaps versus logarithmic baseline
+
+![Figure 2](../figures/02_gaps_vs_log_baseline.png)
+
+### Figure 3 — Mean gap versus logarithmic scale by bin
+
+![Figure 3](../figures/02_mean_gap_vs_log_by_scale.png)
+
+
