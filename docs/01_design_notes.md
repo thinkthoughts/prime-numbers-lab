@@ -19,19 +19,24 @@ The notebook counts residues modulo 6 for:
 1. all integers below N_MAX
 2. primes greater than 3 below N_MAX
 
-It compares residue shares and computes a direct CGCS score.
+It compares residue shares, computes a direct CGCS score, and confirms stability by scale.
+
+## Figures
+
+1. residue distribution modulo 6
+2. CGCS and drift by scale
 
 ## CGCS score
 
 CGCS_mod6 = #{p>3: p mod 6 in {1,5}} / #{p>3}
 
-For this necessary residue constraint, the expected result is exactly 1.0.
+Expected result: exactly 1.0.
 
 ## Drift
 
 drift_mod6 = 1 - CGCS_mod6
 
-The expected drift is exactly 0.0.
+Expected result: exactly 0.0.
 
 ## Recoverability
 
