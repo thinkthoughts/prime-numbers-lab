@@ -1,0 +1,77 @@
+{
+  "params": {
+    "N_MAX": 200000,
+    "RANDOM_SEED": 9423,
+    "NOTEBOOK_ID": "05_random_vs_sieve",
+    "NOTEBOOK_TITLE": "Random vs Sieve",
+    "comparison": "sieve primes vs random-count-matched and random-layer-matched controls"
+  },
+  "summary": {
+    "n_max": 200000,
+    "universe_count": 199999,
+    "prime_count": 17984,
+    "filter_prime_count": 86,
+    "exact_sieve_match": true,
+    "first_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29
+    ],
+    "last_primes": [
+      199873,
+      199877,
+      199889,
+      199909,
+      199921,
+      199931,
+      199933,
+      199961,
+      199967,
+      199999
+    ]
+  },
+  "measurement": {
+    "sieve_recovery": 1.0,
+    "random_count_recovery": 0.08863434163701067,
+    "random_layer_recovery": 0.0898576512455516,
+    "random_count_drift": 0.9113656583629893,
+    "random_layer_drift": 0.9101423487544484,
+    "same_count_random_count_matched": 1,
+    "same_final_count_random_layer_matched": 1
+  },
+  "cgcs": {
+    "score": 1.0,
+    "definition": "CGCS_recovery(S) = |S \u2229 P_N| / |P_N|",
+    "interpretation": "Sieve should score 1.0; random controls should score lower despite matched counts."
+  },
+  "figures": [
+    "05_random_vs_sieve/figures/05_residue_comparison_mod6.png",
+    "05_random_vs_sieve/figures/05_gap_histogram_comparison.png",
+    "05_random_vs_sieve/figures/05_density_by_scale.png",
+    "05_random_vs_sieve/figures/05_layer_retention_comparison.png",
+    "05_random_vs_sieve/figures/05_recovery_scores.png"
+  ],
+  "data": {
+    "summary": "05_random_vs_sieve/data/05_summary.csv",
+    "set_metrics": "05_random_vs_sieve/data/05_set_metrics.csv",
+    "residue_comparison": "05_random_vs_sieve/data/05_residue_comparison.csv",
+    "gap_summary": "05_random_vs_sieve/data/05_gap_summary.csv",
+    "density_by_scale": "05_random_vs_sieve/data/05_density_by_scale.csv",
+    "layer_retention": "05_random_vs_sieve/data/05_layer_retention.csv"
+  },
+  "docs": {
+    "interpretation": "05_random_vs_sieve/docs/05_interpretation.md",
+    "design_notes": "05_random_vs_sieve/docs/05_design_notes.md"
+  },
+  "tex": {
+    "summary_snippet": "05_random_vs_sieve/tex/05_summary_snippet.tex",
+    "math_notes": "05_random_vs_sieve/tex/05_math_notes.tex"
+  }
+}
