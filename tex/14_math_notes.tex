@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Residual Scaling Law}
+
+\subsection*{Normalized gap}
+
+\[
+z_n = \frac{p_{n+1}-p_n}{\log p_n}
+\]
+
+\subsection*{Exponential baseline}
+
+\[
+f_0(z)=e^{-z}, \quad z\ge 0
+\]
+
+\subsection*{Residual}
+
+\[
+\Delta(z,x)=f_{emp}(z,x)-f_0(z)
+\]
+
+\subsection*{Scaling law}
+
+\[
+\|\Delta(z,x)\|\sim C(\log x)^{-\alpha}
+\]
+
+\subsection*{Log-linear fit}
+
+\[
+\log \|\Delta(z,x)\| = \log C - \alpha \log\log x
+\]
+
+\subsection*{Residual CGCS score}
+
+\[
+CGCS_{scale} =
+\frac{1}{1+\overline{\|\Delta\|_1}+\overline{JS}+\overline{|r_{fit}|}}
+\]
+
+\subsection*{Interpretation}
+
+If $\alpha>0$, the finite-scale residual decreases under the selected measurement.
+
+\end{document}
