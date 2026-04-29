@@ -167,12 +167,14 @@
     "04_sieve_constraints/figures/04_retention_vs_product_baseline.png",
     "04_sieve_constraints/figures/04_log_product_vs_loglog.png",
     "04_sieve_constraints/figures/04_loglog_fit_overlay.png",
+    "04_sieve_constraints/figures/04_slope_vs_max_q.png",
     "04_sieve_constraints/figures/04_product_baseline_error.png"
   ],
   "data": {
     "summary": "04_sieve_constraints/data/04_summary.csv",
     "sieve_layers": "04_sieve_constraints/data/04_sieve_layers.csv",
-    "sieve_primes": "04_sieve_constraints/data/04_sieve_primes.csv"
+    "sieve_primes": "04_sieve_constraints/data/04_sieve_primes.csv",
+    "slope_vs_max_q": "04_sieve_constraints/data/04_slope_vs_max_q.csv"
   },
   "docs": {
     "interpretation": "04_sieve_constraints/docs/04_interpretation.md",
