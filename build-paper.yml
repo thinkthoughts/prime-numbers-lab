@@ -1,0 +1,44 @@
+name: Build Paper
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build-paper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps
+        run: |
+          pip install -r requirements.txt
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y latexmk texlive-latex-extra texlive-fonts-recommended
+
+      - name: Generate paper (Notebook 23 must already exist)
+        run: |
+          if [ -d "exports/23_full_paper_generator_outputs/paper" ]; then
+            cd exports/23_full_paper_generator_outputs/paper
+            make
+          else
+            echo "Paper directory not found. Run Notebook 23 locally and commit outputs."
+            exit 1
+          fi
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-pdf
+          path: exports/23_full_paper_generator_outputs/paper/main.pdf
