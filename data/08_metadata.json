@@ -1,0 +1,95 @@
+{
+  "params": {
+    "N_MAX": 200000,
+    "RANDOM_SEED": 9423,
+    "SCENARIOS": [
+      {
+        "name": "mixed_keep_75_noise_25",
+        "kind": "mixed",
+        "keep_fraction": 0.75,
+        "noise_fraction": 0.25
+      },
+      {
+        "name": "mixed_keep_50_noise_50",
+        "kind": "mixed",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "mixed_keep_25_noise_100",
+        "kind": "mixed",
+        "keep_fraction": 0.25,
+        "noise_fraction": 1.0
+      },
+      {
+        "name": "biased_low_missing_high_noise",
+        "kind": "biased_range",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "adversarial_mod6_noise_50",
+        "kind": "adversarial_mod6",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "adversarial_mod6_noise_100",
+        "kind": "adversarial_mod6",
+        "keep_fraction": 0.25,
+        "noise_fraction": 1.0
+      }
+    ],
+    "Q_FILTER": 447,
+    "COMPLETION_BIN_COUNT": 32,
+    "W_DENSITY": 0.45,
+    "W_GAP": 0.4,
+    "W_NEIGHBOR": 0.15,
+    "NOTEBOOK_ID": "08_local_gap_reconstruction",
+    "NOTEBOOK_TITLE": "Local Gap Reconstruction"
+  },
+  "summary": {
+    "n_max": 200000,
+    "prime_count": 17984,
+    "composite_count": 182015,
+    "mod6_composite_count": 48684,
+    "scenario_count": 6
+  },
+  "measurement": {
+    "mean_density_only_f1": 0.9954475626671098,
+    "mean_local_gap_f1": 0.9954195062004246,
+    "mean_density_only_gap_drift": 0.5875389405132665,
+    "mean_local_gap_drift": 0.5836306354588626,
+    "mean_gap_drift_delta_local_minus_density": -0.003908305054403964,
+    "candidate_completion_count": 114940
+  },
+  "cgcs": {
+    "score": 0.9954195062004246,
+    "definition": "mean F1 score of local-gap reconstruction across stress-test scenarios",
+    "interpretation": "Local gap reconstruction preserves global recovery while testing local spacing realism."
+  },
+  "figures": [
+    "08_local_gap_reconstruction/figures/08_method_precision_recovery.png",
+    "08_local_gap_reconstruction/figures/08_f1_by_method.png",
+    "08_local_gap_reconstruction/figures/08_gap_drift_by_method.png",
+    "08_local_gap_reconstruction/figures/08_density_drift_by_method.png",
+    "08_local_gap_reconstruction/figures/08_gap_drift_delta.png",
+    "08_local_gap_reconstruction/figures/08_candidate_completion_distribution_by_method.png",
+    "08_local_gap_reconstruction/figures/08_reconstructed_gap_vs_logx.png",
+    "08_local_gap_reconstruction/figures/08_gap_residual_distribution.png"
+  ],
+  "data": {
+    "summary": "08_local_gap_reconstruction/data/08_summary.csv",
+    "method_metrics": "08_local_gap_reconstruction/data/08_method_metrics.csv",
+    "method_deltas": "08_local_gap_reconstruction/data/08_method_deltas.csv",
+    "candidate_completions": "08_local_gap_reconstruction/data/08_candidate_completions.csv"
+  },
+  "docs": {
+    "interpretation": "08_local_gap_reconstruction/docs/08_interpretation.md",
+    "design_notes": "08_local_gap_reconstruction/docs/08_design_notes.md"
+  },
+  "tex": {
+    "summary_snippet": "08_local_gap_reconstruction/tex/08_summary_snippet.tex",
+    "math_notes": "08_local_gap_reconstruction/tex/08_math_notes.tex"
+  }
+}
