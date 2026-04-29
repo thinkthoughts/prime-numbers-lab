@@ -4,7 +4,8 @@
     "RANDOM_SEED": 9423,
     "NOTEBOOK_ID": "04_sieve_constraints",
     "NOTEBOOK_TITLE": "Sieve Constraints",
-    "constraint": "layered sieve filtering by prime divisibility"
+    "constraint": "layered sieve filtering by prime divisibility",
+    "upgrade": "cumulative product baseline plus log-log/error tracking"
   },
   "summary": {
     "n_max": 200000,
@@ -136,7 +137,15 @@
     "precision_sieve": 1.0,
     "recall_sieve": 1.0,
     "final_retention_share": 0.08992044960224801,
-    "final_drift_share": 0.910079550397752
+    "final_drift_share": 0.910079550397752,
+    "final_product_retention_baseline": 0.09133660882240417,
+    "final_retention_minus_product_baseline": -0.0014161592201561574,
+    "mean_abs_product_baseline_error": 0.0023408239382853233,
+    "mean_abs_decay_error": 0.023693667695958657,
+    "final_log_product_decay": 2.3932035988862155,
+    "final_observed_decay": 2.408829892824256,
+    "final_decay_error": 0.015626293938040714,
+    "corr_log_product_decay_vs_loglog_q": 0.9960448587895948
   },
   "recoverability": {
     "recoverability_score_exact_prime_identity": 1.0,
@@ -151,7 +160,10 @@
   "figures": [
     "04_sieve_constraints/figures/04_retained_candidates_by_layer.png",
     "04_sieve_constraints/figures/04_removed_by_filter.png",
-    "04_sieve_constraints/figures/04_retention_and_drift_by_layer.png"
+    "04_sieve_constraints/figures/04_retention_and_drift_by_layer.png",
+    "04_sieve_constraints/figures/04_retention_vs_product_baseline.png",
+    "04_sieve_constraints/figures/04_log_product_vs_loglog.png",
+    "04_sieve_constraints/figures/04_product_baseline_error.png"
   ],
   "data": {
     "summary": "04_sieve_constraints/data/04_summary.csv",
