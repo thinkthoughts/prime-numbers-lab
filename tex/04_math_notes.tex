@@ -27,6 +27,24 @@ If all prime filters $q_k \le \sqrt{N}$ are applied, then
 S_{\mathrm{final}} = \{p : p \le N,\ p \text{ prime}\}.
 \]
 
+\subsection*{Product retention baseline}
+
+\[
+M(Q)=\prod_{q \le Q}\left(1-\frac{1}{q}\right).
+\]
+
+\subsection*{Log-product decay}
+
+\[
+-\log M(Q) = -\log \prod_{q \le Q}\left(1-\frac{1}{q}\right).
+\]
+
+\subsection*{Product-baseline error}
+
+\[
+error(Q) = retention_{\mathrm{observed}}(Q) - M(Q).
+\]
+
 \subsection*{Retention and drift}
 
 \[

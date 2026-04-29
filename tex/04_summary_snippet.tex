@@ -5,12 +5,21 @@ This notebook measures layered sieve filtering:
 S_k = S_{k-1} \setminus \{n : q_k \mid n,\ n \ne q_k\}.
 \]
 
+It also compares observed retention with the cumulative product baseline:
+\[
+\prod_{q \le Q}\left(1-\frac{1}{q}\right).
+\]
+
 For $N=200,000$:
 \begin{itemize}
   \item initial candidates $= 199999$
   \item final retained candidates $= 17984$
   \item reference prime count $= 17984$
   \item $CGCS_{sieve} = 1.000000$
+  \item final observed retention $= 0.089920$
+  \item final product baseline $= 0.091337$
+  \item final decay error $= 0.015626$
+  \item mean absolute product-baseline error $= 0.002341$
   \item exact match $= True$
 \end{itemize}
 
