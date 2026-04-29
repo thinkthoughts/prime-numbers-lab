@@ -1,0 +1,2 @@
+N_MAX,RANDOM_SEED,NOTEBOOK_ID,NOTEBOOK_TITLE,constraint,valid_prime_count_mod6_1_or_5,invalid_prime_count_mod6_not_1_or_5,total_primes_gt3,cgcs_mod6,drift_mod6,candidate_count_mod6_1_or_5,candidate_prime_count,candidate_nonprime_count,prime_share_among_candidates,note,cgcs_score,cgcs_definition
+1000000,9423,01_residue_classes_mod6,Residue Classes mod 6,"p > 3 implies p mod 6 in {1,5}",78496,0,78496,1.0,0.0,333333,78496,254837,0.2354882354882355,"mod 6 recovers candidate classes, not primes exactly",1.0,"CGCS_mod6 = #{p>3: p mod 6 in {1,5}} / #{p>3}"
