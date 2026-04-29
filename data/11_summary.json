@@ -1,0 +1,11 @@
+{
+  "notebook": "11_learned_gap_model",
+  "max_n": 1000000,
+  "observations": 78472,
+  "best_model": "local_rolling",
+  "best_rmse": 10.224070181210774,
+  "log_baseline_rmse": 10.22504240181249,
+  "best_improvement_vs_log": 9.508230513965987e-05,
+  "best_sinusoidal_frequency": 12.0,
+  "rolling_window": 401
+}
