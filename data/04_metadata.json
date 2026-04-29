@@ -145,7 +145,10 @@
     "final_log_product_decay": 2.3932035988862155,
     "final_observed_decay": 2.408829892824256,
     "final_decay_error": 0.015626293938040714,
-    "corr_log_product_decay_vs_loglog_q": 0.9960448587895948
+    "corr_log_product_decay_vs_loglog_q": 0.9960448587895948,
+    "loglog_fit_slope": 0.8155977380642648,
+    "loglog_fit_intercept": 0.8987998406985057,
+    "loglog_fit_r2": 0.992105360721185
   },
   "recoverability": {
     "recoverability_score_exact_prime_identity": 1.0,
@@ -163,6 +166,7 @@
     "04_sieve_constraints/figures/04_retention_and_drift_by_layer.png",
     "04_sieve_constraints/figures/04_retention_vs_product_baseline.png",
     "04_sieve_constraints/figures/04_log_product_vs_loglog.png",
+    "04_sieve_constraints/figures/04_loglog_fit_overlay.png",
     "04_sieve_constraints/figures/04_product_baseline_error.png"
   ],
   "data": {
