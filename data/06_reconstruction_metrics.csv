@@ -1,0 +1,14 @@
+name,scenario,observed_count,reconstructed_count,reconstruction_recovery,reconstruction_precision
+true_primes,baseline,17984,17984,1.0,1.0
+missing_keep_100,missing,17984,17984,1.0,1.0
+missing_keep_90,missing,16186,16186,0.9000222419928826,1.0
+missing_keep_75,missing,13488,13488,0.75,1.0
+missing_keep_50,missing,8992,8992,0.5,1.0
+missing_keep_25,missing,4496,4496,0.25,1.0
+noise_10,noise,19782,17984,1.0,1.0
+noise_25,noise,22480,17984,1.0,1.0
+noise_50,noise,26976,17984,1.0,1.0
+noise_100,noise,35968,17984,1.0,1.0
+mixed_keep_75_noise_25,mixed,17984,13488,0.75,1.0
+mixed_keep_50_noise_50,mixed,17984,8992,0.5,1.0
+mixed_keep_25_noise_100,mixed,22480,4496,0.25,1.0

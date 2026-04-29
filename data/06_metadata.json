@@ -1,0 +1,104 @@
+{
+  "params": {
+    "N_MAX": 200000,
+    "RANDOM_SEED": 9423,
+    "KEEP_FRACTIONS": [
+      1.0,
+      0.9,
+      0.75,
+      0.5,
+      0.25
+    ],
+    "NOISE_FRACTIONS": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "MIXED_CONFIGS": [
+      {
+        "keep_fraction": 0.75,
+        "noise_fraction": 0.25
+      },
+      {
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "keep_fraction": 0.25,
+        "noise_fraction": 1.0
+      }
+    ],
+    "NOTEBOOK_ID": "06_recoverability_under_partial_observation",
+    "NOTEBOOK_TITLE": "Recoverability Under Partial Observation"
+  },
+  "summary": {
+    "n_max": 200000,
+    "universe_count": 199999,
+    "prime_count": 17984,
+    "composite_count": 182015,
+    "first_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29
+    ],
+    "last_primes": [
+      199873,
+      199877,
+      199889,
+      199909,
+      199921,
+      199931,
+      199933,
+      199961,
+      199967,
+      199999
+    ]
+  },
+  "measurement": {
+    "baseline_recovery": 1.0,
+    "baseline_precision": 1.0,
+    "baseline_mod6": 1.0,
+    "best_noisy_precision": 0.9091092912748964,
+    "worst_mixed_recovery": 0.25,
+    "worst_mixed_precision": 0.2,
+    "mean_recovery_all_observations": 0.7615401724609909,
+    "mean_precision_all_observations": 0.7942904583031971,
+    "mean_mod6_all_observations": 0.8489459740774712,
+    "mean_sieve_consistency_all_observations": 0.7942904583031971
+  },
+  "cgcs": {
+    "score": 1.0,
+    "definition": "CGCS_recovery(S)=|S\u2229P_N|/|P_N|",
+    "interpretation": "Recovery decreases with missing observations; precision and sieve-consistency detect noise."
+  },
+  "figures": [
+    "06_recoverability_under_partial_observation/figures/06_recovery_vs_keep_fraction.png",
+    "06_recoverability_under_partial_observation/figures/06_precision_vs_noise.png",
+    "06_recoverability_under_partial_observation/figures/06_mod6_score_by_scenario.png",
+    "06_recoverability_under_partial_observation/figures/06_density_drift_by_scenario.png",
+    "06_recoverability_under_partial_observation/figures/06_sieve_consistency_scores.png",
+    "06_recoverability_under_partial_observation/figures/06_reconstruction_scores.png"
+  ],
+  "data": {
+    "summary": "06_recoverability_under_partial_observation/data/06_summary.csv",
+    "observation_metrics": "06_recoverability_under_partial_observation/data/06_observation_metrics.csv",
+    "density_drift": "06_recoverability_under_partial_observation/data/06_density_drift.csv",
+    "reconstruction_metrics": "06_recoverability_under_partial_observation/data/06_reconstruction_metrics.csv"
+  },
+  "docs": {
+    "interpretation": "06_recoverability_under_partial_observation/docs/06_interpretation.md",
+    "design_notes": "06_recoverability_under_partial_observation/docs/06_design_notes.md"
+  },
+  "tex": {
+    "summary_snippet": "06_recoverability_under_partial_observation/tex/06_summary_snippet.tex",
+    "math_notes": "06_recoverability_under_partial_observation/tex/06_math_notes.tex"
+  }
+}
