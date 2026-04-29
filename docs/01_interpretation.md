@@ -26,3 +26,15 @@ Modulo 6 recovers prime candidate classes, not primes exactly. Many integers con
 ## Caution
 
 This notebook does not prove RH and does not provide a sufficient primality test. It provides the first direct measurement of structure remaining under a finite residue constraint.
+
+## Figures
+
+### Figure 1 — Residue distribution modulo 6
+
+![Figure 1](../figures/01_residue_distribution_mod6.png)
+
+### Figure 2 — CGCS and drift by scale
+
+![Figure 2](../figures/01_cgcs_and_drift_by_scale_mod6.png)
+
+
