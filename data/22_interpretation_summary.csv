@@ -1,0 +1,4 @@
+claim,supporting_figures,paper_use
+Two-step residual structure is visually and spectrally separable from iid and Markov nulls.,fig:singular-spectra; fig:pvalue-heatmap; fig:ratio-heatmap,Results / Validation
+Low-rank memory is compact enough for a rank-4 or rank-5 correction summary.,fig:rank-requirement; fig:singular-spectra,Results / Operator model
+"Controls that destroy order suppress residual memory, while conservative block/window controls preserve related structure.",fig:control-summary; fig:pvalue-heatmap,Null model discussion

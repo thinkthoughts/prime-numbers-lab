@@ -1,0 +1,7 @@
+control,two_step_l2_residual,js_empirical_vs_markov,top_singular_value,mi_excess_over_shuffle_bits,rank90,rank95,rank4_improvement,entropy_rate_bits
+real,0.067,0.00075,0.0413,0.0405,4,5,0.752,2.67
+iid_shuffle,0.0175,5.5e-05,0.011,4.3e-06,4,5,0.735,3.0
+markov_synthetic,0.0182,5.8e-05,0.0107,0.0407,4,4,0.728,2.67
+block_shuffle,0.0508,0.00044,0.0326,0.0245,4,5,0.743,2.75
+balanced_shuffle,0.0162,4.8e-05,0.0112,0.0,4,5,0.746,3.0
+gap_shuffle,0.0254,0.000126,0.0168,0.0202,4,5,0.738,2.72
