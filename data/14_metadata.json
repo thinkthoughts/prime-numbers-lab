@@ -1,0 +1,89 @@
+{
+  "params": {
+    "N_MAX": 2000000,
+    "RANDOM_SEED": 9423,
+    "Z_MAX": 6.0,
+    "BIN_COUNT": 90,
+    "WINDOW_COUNT": 18,
+    "MIN_WINDOW_GAPS": 200,
+    "NOTEBOOK_ID": "14_residual_scaling_law",
+    "NOTEBOOK_TITLE": "Residual Scaling Law"
+  },
+  "summary": {
+    "n_max": 2000000,
+    "prime_count": 148933,
+    "gap_count": 148932,
+    "first_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29
+    ],
+    "last_primes": [
+      1999853,
+      1999859,
+      1999867,
+      1999871,
+      1999889,
+      1999891,
+      1999957,
+      1999969,
+      1999979,
+      1999993
+    ],
+    "mean_gap": 13.428887008836247,
+    "mean_normalized_gap": 1.0008301339503243,
+    "std_normalized_gap": 0.8122367028952479
+  },
+  "measurement": {
+    "mean_residual_l1": 1.0517455148417953,
+    "final_residual_l1": 0.9256655362264912,
+    "mean_residual_l2": 0.9433198578234396,
+    "final_residual_l2": 0.818645762436931,
+    "mean_js_divergence": 0.23312090873889393,
+    "final_js_divergence": 0.189657269435408,
+    "mean_tail_bias_z_ge_3": -0.020848004334707612,
+    "final_tail_bias_z_ge_3": -0.019376044274780336,
+    "window_count_used": 12
+  },
+  "cgcs": {
+    "score": 0.42677748734628423,
+    "definition": "1 / (1 + mean residual L1 + mean JS divergence + mean abs log-fit residual)",
+    "interpretation": "Closer to 1 indicates smaller residuals and stronger scaling-law agreement.",
+    "mean_abs_log_fit_residual": 0.058274978319470164
+  },
+  "figures": [
+    "14_residual_scaling_law/figures/14_residual_norm_vs_scale.png",
+    "14_residual_scaling_law/figures/14_l1_scaling_fit.png",
+    "14_residual_scaling_law/figures/14_l2_scaling_fit.png",
+    "14_residual_scaling_law/figures/14_js_scaling_fit.png",
+    "14_residual_scaling_law/figures/14_alpha_comparison.png",
+    "14_residual_scaling_law/figures/14_fit_residuals.png",
+    "14_residual_scaling_law/figures/14_residual_heatmap_across_scale.png",
+    "14_residual_scaling_law/figures/14_positive_negative_residual_mass.png",
+    "14_residual_scaling_law/figures/14_distributional_convergence_score.png",
+    "14_residual_scaling_law/figures/14_tail_residual_bias_z_ge_3.png",
+    "14_residual_scaling_law/figures/14_final_window_pdf_vs_exp1.png"
+  ],
+  "data": {
+    "summary": "14_residual_scaling_law/data/14_summary.csv",
+    "windows": "14_residual_scaling_law/data/14_windows.csv",
+    "residual_metrics": "14_residual_scaling_law/data/14_residual_metrics.csv",
+    "residual_grid": "14_residual_scaling_law/data/14_residual_grid.csv",
+    "scaling_fit_summary": "14_residual_scaling_law/data/14_scaling_fit_summary.csv"
+  },
+  "docs": {
+    "interpretation": "14_residual_scaling_law/docs/14_interpretation.md",
+    "design_notes": "14_residual_scaling_law/docs/14_design_notes.md"
+  },
+  "tex": {
+    "summary_snippet": "14_residual_scaling_law/tex/14_summary_snippet.tex",
+    "math_notes": "14_residual_scaling_law/tex/14_math_notes.tex"
+  }
+}
