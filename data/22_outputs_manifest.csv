@@ -1,0 +1,24 @@
+notebook,kind,path,description
+22_publication_figure_pack,csv,data/22_control_metrics_source.csv,Canonical control metrics used by Notebook 22
+22_publication_figure_pack,csv,data/22_singular_spectrum_source.csv,Canonical singular spectra used by Notebook 22
+22_publication_figure_pack,csv,data/22_pvalue_matrix_source.csv,Canonical statistical validation p-value matrix used by Notebook 22
+22_publication_figure_pack,csv,data/22_publication_ratio_matrix_source.csv,Canonical publication summary ratio matrix used by Notebook 22
+22_publication_figure_pack,figure_png,figures/22_real_vs_control_singular_spectra.png,Real and control singular spectra for two-step residual operator
+22_publication_figure_pack,figure_pdf,figures/22_real_vs_control_singular_spectra.pdf,Real and control singular spectra for two-step residual operator
+22_publication_figure_pack,figure_png,figures/22_control_metric_summary.png,Normalized publication metric summary across controls
+22_publication_figure_pack,figure_pdf,figures/22_control_metric_summary.pdf,Normalized publication metric summary across controls
+22_publication_figure_pack,figure_png,figures/22_statistical_validation_pvalue_heatmap.png,Statistical validation p-value heatmap
+22_publication_figure_pack,figure_pdf,figures/22_statistical_validation_pvalue_heatmap.pdf,Statistical validation p-value heatmap
+22_publication_figure_pack,figure_png,figures/22_publication_summary_ratio_heatmap.png,Publication summary real/null ratio heatmap
+22_publication_figure_pack,figure_pdf,figures/22_publication_summary_ratio_heatmap.pdf,Publication summary real/null ratio heatmap
+22_publication_figure_pack,figure_png,figures/22_residual_energy_rank_requirement.png,Residual energy rank requirement across controls
+22_publication_figure_pack,figure_pdf,figures/22_residual_energy_rank_requirement.pdf,Residual energy rank requirement across controls
+22_publication_figure_pack,figure_png,figures/22_entropy_rate_and_residual_comparison.png,Entropy rate and residual magnitude comparison
+22_publication_figure_pack,figure_pdf,figures/22_entropy_rate_and_residual_comparison.pdf,Entropy rate and residual magnitude comparison
+22_publication_figure_pack,csv,data/22_figure_registry.csv,Publication figure registry with captions and file paths
+22_publication_figure_pack,markdown,docs/22_figure_captions.md,Markdown figure captions
+22_publication_figure_pack,tex,tex/22_figures.tex,LaTeX figure blocks
+22_publication_figure_pack,tex,tex/22_methods_note.tex,LaTeX methods note for figure pack
+22_publication_figure_pack,csv,data/22_interpretation_summary.csv,Paper-ready interpretation summary
+22_publication_figure_pack,markdown,docs/22_interpretation.md,Markdown interpretation summary
+22_publication_figure_pack,csv,22_outputs_manifest.csv,Outputs manifest for Notebook 22

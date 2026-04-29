@@ -1,0 +1,52 @@
+{
+  "notebook_id": "22_publication_figure_pack",
+  "notebook_number": 22,
+  "seed": 9423,
+  "purpose": "Publication figure pack for prime-residue transition/memory validation pipeline",
+  "figures": [
+    {
+      "figure_id": "fig:singular-spectra",
+      "title": "Real versus control singular spectra",
+      "caption": "Singular spectra of the two-step residual operator $\\Delta=P^{(2)}_{\\mathrm{emp}}-P^2$ for the real sequence and synthetic controls. The leading real singular modes exceed iid and Markov controls, indicating structured higher-order memory beyond first-order transition statistics.",
+      "png": "figures/22_real_vs_control_singular_spectra.png",
+      "pdf": "figures/22_real_vs_control_singular_spectra.pdf"
+    },
+    {
+      "figure_id": "fig:control-summary",
+      "title": "Control metric summary",
+      "caption": "Normalized comparison of the principal validation metrics across real and control sequences. The real sequence dominates two-step residual magnitude, JS distance, leading singular value, and mutual-information excess, while iid and balanced controls remain near the noise floor.",
+      "png": "figures/22_control_metric_summary.png",
+      "pdf": "figures/22_control_metric_summary.pdf"
+    },
+    {
+      "figure_id": "fig:pvalue-heatmap",
+      "title": "Statistical validation p-value heatmap",
+      "caption": "Permutation and resampling validation summarized as $-\\log_{10}(p)$ values. Structure-destroying iid and Markov nulls reject multiple real-sequence metrics, while block and window resampling retain local structure and therefore behave as conservative controls.",
+      "png": "figures/22_statistical_validation_pvalue_heatmap.png",
+      "pdf": "figures/22_statistical_validation_pvalue_heatmap.pdf"
+    },
+    {
+      "figure_id": "fig:ratio-heatmap",
+      "title": "Publication summary ratio heatmap",
+      "caption": "Effect-size summary showing real metrics divided by null means. Ratios above one indicate real-sequence excess relative to a null ensemble; clipped color scaling preserves readability while annotations retain numerical ratios.",
+      "png": "figures/22_publication_summary_ratio_heatmap.png",
+      "pdf": "figures/22_publication_summary_ratio_heatmap.pdf"
+    },
+    {
+      "figure_id": "fig:rank-requirement",
+      "title": "Residual energy rank requirement",
+      "caption": "Low-rank energy summary for the residual operator. The real sequence remains concentrated in a small number of singular modes, supporting a compact memory correction rather than high-dimensional noise fitting.",
+      "png": "figures/22_residual_energy_rank_requirement.png",
+      "pdf": "figures/22_residual_energy_rank_requirement.pdf"
+    },
+    {
+      "figure_id": "fig:entropy-residual",
+      "title": "Entropy rate and residual magnitude comparison",
+      "caption": "Entropy and two-step residual magnitude across real and control sequences. Randomizing controls increase entropy and suppress residual memory, while the real sequence retains measurable structured deviation from the first-order Markov baseline.",
+      "png": "figures/22_entropy_rate_and_residual_comparison.png",
+      "pdf": "figures/22_entropy_rate_and_residual_comparison.pdf"
+    }
+  ],
+  "outputs_manifest_csv": "22_outputs_manifest.csv",
+  "zip_file": "22_publication_figure_pack_outputs.zip"
+}
