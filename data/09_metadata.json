@@ -1,0 +1,100 @@
+{
+  "params": {
+    "N_MAX": 200000,
+    "RANDOM_SEED": 9423,
+    "SCENARIOS": [
+      {
+        "name": "mixed_keep_75_noise_25",
+        "kind": "mixed",
+        "keep_fraction": 0.75,
+        "noise_fraction": 0.25
+      },
+      {
+        "name": "mixed_keep_50_noise_50",
+        "kind": "mixed",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "mixed_keep_25_noise_100",
+        "kind": "mixed",
+        "keep_fraction": 0.25,
+        "noise_fraction": 1.0
+      },
+      {
+        "name": "biased_low_missing_high_noise",
+        "kind": "biased_range",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "adversarial_mod6_noise_50",
+        "kind": "adversarial_mod6",
+        "keep_fraction": 0.5,
+        "noise_fraction": 0.5
+      },
+      {
+        "name": "adversarial_mod6_noise_100",
+        "kind": "adversarial_mod6",
+        "keep_fraction": 0.25,
+        "noise_fraction": 1.0
+      }
+    ],
+    "Q_FILTER": 447,
+    "COMPLETION_BIN_COUNT": 32,
+    "W_DENSITY": 0.45,
+    "W_GAP": 0.4,
+    "W_NEIGHBOR": 0.15,
+    "WINDOW_WIDTH": 10000,
+    "WINDOW_STEP": 5000,
+    "WINDOW_COUNT": 40,
+    "NOTEBOOK_ID": "09_windowed_reconstruction_stability",
+    "NOTEBOOK_TITLE": "Windowed Reconstruction Stability"
+  },
+  "summary": {
+    "n_max": 200000,
+    "prime_count": 17984,
+    "composite_count": 182015,
+    "mod6_composite_count": 48684,
+    "scenario_count": 6,
+    "window_count": 40
+  },
+  "measurement": {
+    "mean_window_density_error_density_only": 0.00898693647271665,
+    "mean_window_density_error_local_gap": 0.00910768815544717,
+    "mean_window_gap_drift_density_only": 0.5888461045841696,
+    "mean_window_gap_drift_local_gap": 0.5853161328487455,
+    "mean_delta_gap_drift_local_minus_density": -0.003529971735424261,
+    "mean_delta_density_error_local_minus_density": 0.00012075168273051907
+  },
+  "cgcs": {
+    "score": 0.6271858127221058,
+    "definition": "windowed stability score = 1/(1 + mean density error + mean gap drift) for local-gap reconstruction",
+    "interpretation": "Higher score means better local density and gap stability."
+  },
+  "figures": [
+    "09_windowed_reconstruction_stability/figures/09_mean_window_density_error_by_method.png",
+    "09_windowed_reconstruction_stability/figures/09_mean_window_gap_drift_by_method.png",
+    "09_windowed_reconstruction_stability/figures/09_window_density_error_profile.png",
+    "09_windowed_reconstruction_stability/figures/09_window_gap_drift_profile.png",
+    "09_windowed_reconstruction_stability/figures/09_window_gap_drift_delta.png",
+    "09_windowed_reconstruction_stability/figures/09_unstable_density_windows.png",
+    "09_windowed_reconstruction_stability/figures/09_unstable_gap_windows.png",
+    "09_windowed_reconstruction_stability/figures/09_windowed_gap_drift_stability_map.png"
+  ],
+  "data": {
+    "summary": "09_windowed_reconstruction_stability/data/09_summary.csv",
+    "window_metrics": "09_windowed_reconstruction_stability/data/09_window_metrics.csv",
+    "window_summary": "09_windowed_reconstruction_stability/data/09_window_summary.csv",
+    "window_deltas": "09_windowed_reconstruction_stability/data/09_window_deltas.csv",
+    "candidate_completions": "09_windowed_reconstruction_stability/data/09_candidate_completions.csv"
+  },
+  "docs": {
+    "interpretation": "09_windowed_reconstruction_stability/docs/09_interpretation.md",
+    "design_notes": "09_windowed_reconstruction_stability/docs/09_design_notes.md"
+  },
+  "tex": {
+    "summary_snippet": "09_windowed_reconstruction_stability/tex/09_summary_snippet.tex",
+    "math_notes": "09_windowed_reconstruction_stability/tex/09_math_notes.tex"
+  }
+}

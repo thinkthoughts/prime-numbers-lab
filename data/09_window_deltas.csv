@@ -1,0 +1,7 @@
+scenario,kind,delta_mean_density_error_local_minus_density,delta_max_density_error_local_minus_density,delta_mean_gap_drift_local_minus_density,delta_max_gap_drift_local_minus_density,delta_unstable_density_windows_local_minus_density,delta_unstable_gap_windows_local_minus_density
+mixed_keep_75_noise_25,mixed,0.00010396320363290946,0.0,-0.004305041723711378,-0.008299312203674636,0,0
+mixed_keep_50_noise_50,mixed,0.00011086839298736668,0.0,-0.0034115856337927353,-0.0038504955446030387,0,0
+mixed_keep_25_noise_100,mixed,7.248001497773236e-05,0.0012091898428053215,-0.0036537812372074985,-0.005180107411187129,0,0
+biased_low_missing_high_noise,biased_range,1.9379639853728953e-05,0.002418379685610643,-0.0020724001722063345,0.006431864637250317,0,0
+adversarial_mod6_noise_50,adversarial_mod6,0.00014814410751633027,0.0,-0.003962501845113153,-0.009136414625354528,0,0
+adversarial_mod6_noise_100,adversarial_mod6,0.0002696747374150467,-0.0012091898428053215,-0.0037745198005144642,-0.0009274569942597788,0,0
