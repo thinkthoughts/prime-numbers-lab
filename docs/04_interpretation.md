@@ -34,6 +34,9 @@ M(Q) = product_{q <= Q}(1 - 1/q).
 - log-log fit slope = 0.815598
 - log-log fit intercept = 0.898800
 - log-log fit R^2 = 0.992105
+- final prefix slope from slope-vs-max-Q test = 0.815598
+- final prefix slope gap to 1 = 0.184402
+- final prefix R^2 = 0.992105
 
 ## CGCS score
 
@@ -51,6 +54,10 @@ The full sieve recovers prime identity exactly up to N when all prime filters q 
 Exact recovery holds because the sieve encodes all divisibility constraints needed to certify primality below N.
 
 ## Caution
+
+The fitted slope remains below the asymptotic value 1 in this finite range. This indicates a pre-asymptotic constraint-accumulation regime, not a failure of the product model.
+
+The deviation reflects incomplete accumulation of prime constraints and residual correlations between divisibility conditions.
 
 The product model provides a first-order density approximation, but finite sieve behavior includes correlation effects not captured by independence.
 
@@ -82,8 +89,12 @@ This notebook demonstrates finite exact recovery by the classical sieve. It does
 
 ![Figure 6](../figures/04_loglog_fit_overlay.png)
 
-### Figure 7 — Product-baseline error
+### Figure 7 — Slope versus max Q
 
-![Figure 7](../figures/04_product_baseline_error.png)
+![Figure 7](../figures/04_slope_vs_max_q.png)
+
+### Figure 8 — Product-baseline error
+
+![Figure 8](../figures/04_product_baseline_error.png)
 
 
