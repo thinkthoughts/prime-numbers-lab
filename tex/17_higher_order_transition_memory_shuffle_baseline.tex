@@ -1,0 +1,42 @@
+
+\section{Notebook 17: Higher-Order Transition Memory and Shuffle Baseline}
+
+Notebook 17 tests whether normalized prime-gap residual states contain higher-order
+transition memory beyond a first-order Markov operator.  Let $s_n$ denote a
+quantile-discretized state of the normalized gap
+\[
+z_n = \frac{p_{n+1}-p_n}{\log p_n}.
+\]
+The first-order operator is
+\[
+P_{ij}=\Pr(s_{n+1}=j\mid s_n=i),
+\]
+while the empirical two-step operator is
+\[
+P^{(2)}_{ik}=\Pr(s_{n+2}=k\mid s_n=i).
+\]
+The Markov prediction is $\widehat{P}^{(2)}=P^2$, giving the residual
+\[
+\Delta^{(2)} = P^{(2)}-\widehat{P}^{(2)}.
+\]
+
+For this run, the mean two-step $L_2$ residual is
+\[
+\|\Delta^{(2)}\|_2 = 0.00793828,
+\]
+compared with a shuffle-baseline mean of
+\[
+0.00219103.
+\]
+The lag-one excess mutual information is
+\[
+I_1^{\rm real}-I_1^{\rm shuffle} =
+0.0124681,
+\]
+and the lag-two excess mutual information is
+\[
+I_2^{\rm real}-I_2^{\rm shuffle} =
+0.00211557.
+\]
+These diagnostics quantify ordered transition memory after controlling for the
+one-point state distribution.
