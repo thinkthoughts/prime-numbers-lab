@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Normalized Gap Distribution}
+
+\subsection*{Prime gaps}
+
+For consecutive primes $p_n$ and $p_{n+1}$,
+
+\[
+g_n = p_{n+1} - p_n.
+\]
+
+\subsection*{Local log-scale normalization}
+
+At local scale $x_n = p_n$,
+
+\[
+z_n = \frac{g_n}{\log(x_n)}.
+\]
+
+\subsection*{Exponential baseline}
+
+A standard random-model comparison is
+
+\[
+Z \sim \mathrm{Exp}(1),
+\]
+
+with density and cumulative distribution
+
+\[
+f(z) = e^{-z}, \qquad F(z) = 1 - e^{-z}.
+\]
+
+Tail exceedance is
+
+\[
+P(Z > t) = e^{-t}.
+\]
+
+\subsection*{Distributional CGCS}
+
+For empirical normalized-gap distribution $P_{empirical}$ and exponential baseline $P_{Exp(1)}$,
+
+\[
+CGCS = \frac{1}{1 + JS(P_{empirical}, P_{Exp(1)})}.
+\]
+
+Notebook 12 final-window score:
+
+\[
+CGCS_{final} = 0.977480.
+\]
+
+\subsection*{Interpretation}
+
+Structure remains under constraint when raw gap growth is reduced to a comparatively stable normalized distribution. Drift remains visible in tails and quantiles, so the result is a diagnostic rather than a theorem.
+
+\end{document}
