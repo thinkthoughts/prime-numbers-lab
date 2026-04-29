@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Prime Density vs x/log(x)}
+
+\subsection*{Prime-counting function}
+
+Let $\pi(x)$ denote the number of primes less than or equal to $x$.
+
+\subsection*{Logarithmic density baseline}
+
+\[
+\pi(x) \approx \frac{x}{\log x}.
+\]
+
+\subsection*{Ratio}
+
+\[
+R(x) = \frac{\pi(x)}{x/\log x}.
+\]
+
+\subsection*{Density drift}
+
+\[
+drift(x) =
+\frac{|\pi(x) - x/\log x|}{x/\log x}.
+\]
+
+\subsection*{CGCS score}
+
+\[
+CGCS_{density} =
+\frac{1}{1 + \operatorname{mean}(drift(x))}.
+\]
+
+Measured value:
+\[
+CGCS_{density} = 0.882369.
+\]
+
+\subsection*{Recoverability}
+
+The baseline $x/\log x$ recovers global count scale, not exact prime locations.
+
+\end{document}

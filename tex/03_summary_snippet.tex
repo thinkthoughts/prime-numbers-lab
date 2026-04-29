@@ -1,0 +1,16 @@
+\section*{Prime Density vs x/log(x)}
+
+This notebook compares prime counts to the logarithmic density baseline
+\[
+\pi(x) \approx \frac{x}{\log x}.
+\]
+
+For primes up to 1,000,000:
+\begin{itemize}
+  \item final ratio $\pi(x)/(x/\log x) = 1.084490$
+  \item mean density drift $= 0.133313$
+  \item median density drift $= 0.128925$
+  \item $CGCS_{density} = 0.882369$
+\end{itemize}
+
+The baseline $x/\log x$ recovers global density scale, not exact prime locations.
