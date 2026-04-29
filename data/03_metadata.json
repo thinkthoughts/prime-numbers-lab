@@ -1,0 +1,98 @@
+{
+  "params": {
+    "N_MAX": 1000000,
+    "N_POINTS": 80,
+    "RANDOM_SEED": 9423,
+    "NOTEBOOK_ID": "03_density_vs_log",
+    "NOTEBOOK_TITLE": "Prime Density vs x/log(x)",
+    "constraint": "prime counting compared to x/log(x)"
+  },
+  "summary": {
+    "n_max": 1000000,
+    "prime_count_leq_nmax": 78498,
+    "x_value_count": 80,
+    "first_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29
+    ],
+    "last_primes": [
+      999863,
+      999883,
+      999907,
+      999917,
+      999931,
+      999953,
+      999959,
+      999961,
+      999979,
+      999983
+    ],
+    "first_x_values": [
+      100,
+      112,
+      126,
+      141,
+      159,
+      179,
+      201,
+      226,
+      254,
+      285
+    ],
+    "last_x_values": [
+      350190,
+      393492,
+      442149,
+      496823,
+      558258,
+      627289,
+      704857,
+      792016,
+      889953,
+      1000000
+    ]
+  },
+  "measurement": {
+    "mean_drift_density": 0.1333125139652925,
+    "median_drift_density": 0.12892497772372263,
+    "max_drift_density": 0.22175417203176545,
+    "final_ratio_pi_over_xlogx": 1.0844899477790795,
+    "final_drift_density": 0.08448994777907955,
+    "cgcs_density": 0.882369150324784
+  },
+  "recoverability": {
+    "recoverability_score_median_density": 0.8857984540445929,
+    "definition": "1 / (1 + median density drift)",
+    "note": "x/log(x) recovers global density scale, not exact prime positions"
+  },
+  "cgcs": {
+    "score": 0.882369150324784,
+    "definition": "CGCS_density = 1 / (1 + mean(|pi(x)-x/log(x)|/(x/log(x))))",
+    "interpretation": "Closer to 1 indicates lower average drift from logarithmic density scale."
+  },
+  "figures": [
+    "03_density_vs_log/figures/03_pi_x_vs_x_over_log_x.png",
+    "03_density_vs_log/figures/03_ratio_pi_x_over_xlogx.png",
+    "03_density_vs_log/figures/03_density_drift.png"
+  ],
+  "data": {
+    "summary": "03_density_vs_log/data/03_summary.csv",
+    "density_vs_log": "03_density_vs_log/data/03_density_vs_log.csv"
+  },
+  "docs": {
+    "interpretation": "03_density_vs_log/docs/03_interpretation.md",
+    "design_notes": "03_density_vs_log/docs/03_design_notes.md"
+  },
+  "tex": {
+    "summary_snippet": "03_density_vs_log/tex/03_summary_snippet.tex",
+    "math_notes": "03_density_vs_log/tex/03_math_notes.tex"
+  }
+}
