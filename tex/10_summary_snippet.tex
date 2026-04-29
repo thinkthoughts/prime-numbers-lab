@@ -1,0 +1,26 @@
+\section*{Adaptive Window Reconstruction}
+
+This notebook uses local instability as reconstruction feedback.
+
+For a window $W$, define
+\[
+I(W)=\alpha d(W)+\beta g(W).
+\]
+
+Adaptive weights are
+\[
+w_{\mathrm{gap}}(W)=w_{\mathrm{gap}}\left(1+\lambda I(W)\right),
+\]
+\[
+w_{\mathrm{density}}(W)=\frac{w_{\mathrm{density}}}{1+\lambda I(W)}.
+\]
+
+For $N=200,000$:
+\begin{itemize}
+  \item adaptive mean density error $= 0.009111$
+  \item adaptive mean gap drift $= 0.588335$
+  \item adaptive minus fixed gap drift $= 0.003019$
+  \item adaptive stability CGCS score $= 0.625999$
+\end{itemize}
+
+Adaptive window reconstruction treats local instability as feedback.

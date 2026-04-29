@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Adaptive Window Reconstruction}
+
+\subsection*{Window instability}
+\[
+I(W)=\alpha d(W)+\beta g(W).
+\]
+
+\subsection*{Adaptive gap weight}
+\[
+w_{\mathrm{gap}}(W)=w_{\mathrm{gap}}\left(1+\lambda I(W)\right).
+\]
+
+\subsection*{Adaptive density weight}
+\[
+w_{\mathrm{density}}(W)=\frac{w_{\mathrm{density}}}{1+\lambda I(W)}.
+\]
+
+\subsection*{Adaptive candidate score}
+\[
+score(x,W)=
+w_d(W)s_d(x)+w_g(W)s_g(x)+w_n s_n(x).
+\]
+
+\subsection*{Adaptive stability score}
+\[
+CGCS_{\mathrm{adaptive}}=
+\frac{1}{1+\overline{d(W)}+\overline{g(W)}}.
+\]
+
+\end{document}
