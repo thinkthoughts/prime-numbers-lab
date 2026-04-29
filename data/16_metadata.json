@@ -1,0 +1,87 @@
+{
+  "params": {
+    "N_MAX": 2000000,
+    "RANDOM_SEED": 9423,
+    "RESIDUES30": [
+      1,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29
+    ],
+    "Z_MAX": 6.0,
+    "BIN_COUNT": 70,
+    "WINDOW_COUNT": 14,
+    "MIN_WINDOW_TRANSITIONS": 250,
+    "NOTEBOOK_ID": "16_transition_operator_entropy_mixing",
+    "NOTEBOOK_TITLE": "Transition Operator, Entropy, and Mixing"
+  },
+  "summary": {
+    "n_max": 2000000,
+    "prime_count_excluding_2_3_5": 148930,
+    "transition_count": 148929,
+    "mean_gap": 13.429123944967065,
+    "mean_normalized_gap": 1.0008200395230373,
+    "std_normalized_gap": 0.8122410579059465
+  },
+  "measurement": {
+    "stationary_l1_to_uniform": 0.0015332913176359375,
+    "stationary_l2_to_uniform": 0.0006654580775124671,
+    "mean_transition_entropy": 0.891852649284891,
+    "min_transition_entropy": 0.8842281815803954,
+    "max_transition_entropy": 0.8981329337321184,
+    "lambda_2_abs": 0.381100319414887,
+    "spectral_gap_proxy": 0.618899680585113,
+    "top_lift_transition": "17->19",
+    "top_lift_value": 2.3129256919144323,
+    "top_residual_transition": "23->23",
+    "top_residual_l1": 1.8312633615088418,
+    "windowed_operator_drift_min": 0.0031566988321038237,
+    "windowed_operator_drift_max": 0.061381654420119086
+  },
+  "cgcs": {
+    "score": 0.6707893552845912,
+    "definition": "1/(1 + stationary L1 to uniform + entropy deficit + lambda2)",
+    "interpretation": "Higher score indicates closer-to-uniform stationary behavior, higher entropy, and faster mixing."
+  },
+  "figures": [
+    "16_transition_operator_entropy_mixing/figures/16_transition_operator_heatmap.png",
+    "16_transition_operator_entropy_mixing/figures/16_stationary_distribution.png",
+    "16_transition_operator_entropy_mixing/figures/16_transition_entropy_by_anchor.png",
+    "16_transition_operator_entropy_mixing/figures/16_mixing_distance_vs_steps.png",
+    "16_transition_operator_entropy_mixing/figures/16_transition_eigenvalue_magnitudes.png",
+    "16_transition_operator_entropy_mixing/figures/16_transition_lift_heatmap.png",
+    "16_transition_operator_entropy_mixing/figures/16_top_transition_residual_masses.png",
+    "16_transition_operator_entropy_mixing/figures/16_residual_weighted_transition_operator.png",
+    "16_transition_operator_entropy_mixing/figures/16_transition_conditioned_residual_curves.png",
+    "16_transition_operator_entropy_mixing/figures/16_windowed_transition_operator_drift.png",
+    "16_transition_operator_entropy_mixing/figures/16_windowed_transition_entropy.png",
+    "16_transition_operator_entropy_mixing/figures/16_windowed_transition_delta_heatmap.png"
+  ],
+  "data": {
+    "summary": "16_transition_operator_entropy_mixing/data/16_summary.csv",
+    "transition_operator": "16_transition_operator_entropy_mixing/data/16_transition_operator.csv",
+    "transition_counts": "16_transition_operator_entropy_mixing/data/16_transition_counts.csv",
+    "stationary_distribution": "16_transition_operator_entropy_mixing/data/16_stationary_distribution.csv",
+    "entropy_by_anchor": "16_transition_operator_entropy_mixing/data/16_entropy_by_anchor.csv",
+    "spectral_metrics": "16_transition_operator_entropy_mixing/data/16_spectral_metrics.csv",
+    "mixing_metrics": "16_transition_operator_entropy_mixing/data/16_mixing_metrics.csv",
+    "transition_lift_records": "16_transition_operator_entropy_mixing/data/16_transition_lift_records.csv",
+    "transition_residual_metrics": "16_transition_operator_entropy_mixing/data/16_transition_residual_metrics.csv",
+    "transition_residual_grid": "16_transition_operator_entropy_mixing/data/16_transition_residual_grid.csv",
+    "windowed_transition_drift": "16_transition_operator_entropy_mixing/data/16_windowed_transition_drift.csv",
+    "windowed_transition_operator_grid": "16_transition_operator_entropy_mixing/data/16_windowed_transition_operator_grid.csv",
+    "residual_weighted_transition_operator": "16_transition_operator_entropy_mixing/data/16_residual_weighted_transition_operator.csv"
+  },
+  "docs": {
+    "interpretation": "16_transition_operator_entropy_mixing/docs/16_interpretation.md",
+    "design_notes": "16_transition_operator_entropy_mixing/docs/16_design_notes.md"
+  },
+  "tex": {
+    "summary_snippet": "16_transition_operator_entropy_mixing/tex/16_summary_snippet.tex",
+    "math_notes": "16_transition_operator_entropy_mixing/tex/16_math_notes.tex"
+  }
+}
