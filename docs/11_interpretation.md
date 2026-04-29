@@ -37,7 +37,7 @@ RMSE improvement vs log baseline: `0.0095%`
 
 Interpretation:
 
-If improvement is small, the fixed log model is already close to the available signal at this scale. If improvement is substantial, the Notebook 10 ceiling was model-limited rather than weighting-limited.
+If improvement is tiny, the fixed log model is already close to the available signal at this scale. In that case, the remaining error is dominated by gap variance rather than by a smooth expected-gap bias.
 
 ---
 
@@ -45,19 +45,19 @@ If improvement is small, the fixed log model is already close to the available s
 
 ![Expected gap curves](../figures/11_expected_gap_curves.png)
 
-This plot compares observed prime gaps to expected-gap curves.
+Observed gaps scatter widely around all expected-gap curves.
 
-The main question is whether learned curves track local structure better than `log(x)` without simply overfitting pointwise noise.
+The key question is whether learned curves track local structure better than `log(x)` without simply overfitting pointwise noise.
 
 ---
 
-## 3. Windowed residual drift
+## 3. Windowed relative residual drift
 
 ![Windowed relative residual drift](../figures/11_window_relative_residual_drift.png)
 
-The key diagnostic is windowed relative residual drift.
+A stronger expected-gap model should reduce relative residual drift across windows, not only improve global RMSE.
 
-A better expected-gap model should reduce drift across windows, not only improve global RMSE.
+When all models produce nearly identical drift, the mean model is not the limiting factor.
 
 ---
 
@@ -67,6 +67,8 @@ A better expected-gap model should reduce drift across windows, not only improve
 
 A stable model keeps mean residuals closer to zero across scale.
 
+Here, learned models reduce some local mean residuals, but the global improvement remains small.
+
 ---
 
 ## 5. Improvement ratio
@@ -74,6 +76,8 @@ A stable model keeps mean residuals closer to zero across scale.
 ![RMSE improvement vs log](../figures/11_rmse_improvement_vs_log.png)
 
 This compares each learned model against the fixed `log(x)` baseline.
+
+The improvement scale is the important signal: extremely small improvements mean that deterministic expected-gap modeling has saturated.
 
 ---
 
@@ -84,9 +88,13 @@ Notebook 11 distinguishes two possibilities:
 1. **Small improvement**: reconstruction has reached a structural limit for these features.
 2. **Large improvement**: expected-gap modeling was the missing piece after Notebook 10.
 
-In either case, Notebook 11 converts the Notebook 10 observation into a sharper diagnostic:
+At the current scale, results support the first interpretation:
 
-> adaptation is not enough unless expected-gap structure improves.
+> deterministic expected-gap refinements do not materially beat `log(x)`.
+
+That motivates Notebook 12:
+
+> model the gap distribution, not only the expected gap.
 
 ---
 
