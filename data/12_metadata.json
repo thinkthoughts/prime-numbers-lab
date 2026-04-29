@@ -1,0 +1,132 @@
+{
+  "params": {
+    "N_MAX": 1000000,
+    "RANDOM_SEED": 9423,
+    "MIN_X_FOR_GAPS": 100,
+    "N_WINDOWS": 16,
+    "HIST_BINS": [
+      0.0,
+      0.2,
+      0.4,
+      0.6000000000000001,
+      0.8,
+      1.0,
+      1.2000000000000002,
+      1.4000000000000001,
+      1.6,
+      1.8,
+      2.0,
+      2.2,
+      2.4000000000000004,
+      2.6,
+      2.8000000000000003,
+      3.0,
+      3.2,
+      3.4000000000000004,
+      3.6,
+      3.8000000000000003,
+      4.0,
+      4.2,
+      4.4,
+      4.6000000000000005,
+      4.800000000000001,
+      5.0,
+      5.2,
+      5.4,
+      5.6000000000000005,
+      5.800000000000001,
+      6.0,
+      6.2,
+      6.4,
+      6.6000000000000005,
+      6.800000000000001,
+      7.0,
+      7.2,
+      7.4,
+      7.6000000000000005,
+      7.800000000000001,
+      8.0
+    ],
+    "TAIL_THRESHOLDS": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "NOTEBOOK_ID": "12_normalized_gap_distribution",
+    "NOTEBOOK_TITLE": "Normalized Gap Distribution"
+  },
+  "summary": {
+    "n_max": 1000000,
+    "prime_count": 78498,
+    "gap_count": 78472,
+    "min_x_for_gaps": 100,
+    "first_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29
+    ],
+    "last_primes": [
+      999863,
+      999883,
+      999907,
+      999917,
+      999931,
+      999953,
+      999959,
+      999961,
+      999979,
+      999983
+    ]
+  },
+  "measurement": {
+    "overall_mean_z": 1.0015904744434432,
+    "overall_std_z": 0.7980986422562308,
+    "overall_q50_z": 0.7804601730087715,
+    "overall_q90_z": 2.0740756354469245,
+    "overall_q99_z": 3.7298702120367166,
+    "final_window_distributional_score": 0.9774799617343894,
+    "mean_distributional_score": 0.9179997177927681,
+    "max_distributional_score": 0.9837193627304713,
+    "min_js_divergence_to_exp1": 0.0165500831704066,
+    "final_mean_gap_over_mean_logx": 1.0013087305559385
+  },
+  "cgcs": {
+    "score": 0.9774799617343894,
+    "definition": "1 / (1 + Jensen-Shannon divergence between final-window normalized gap distribution and Exp(1) baseline)",
+    "interpretation": "Closer to 1 indicates stronger final-window distributional agreement after z = gap/log(x) normalization."
+  },
+  "figures": [
+    "12_normalized_gap_distribution/figures/12_normalized_gap_histogram.png",
+    "12_normalized_gap_distribution/figures/12_normalized_gap_ecdf.png",
+    "12_normalized_gap_distribution/figures/12_mean_spread_scaling.png",
+    "12_normalized_gap_distribution/figures/12_normalized_gap_heatmap.png",
+    "12_normalized_gap_distribution/figures/12_distributional_fit_score.png",
+    "12_normalized_gap_distribution/figures/12_normalized_gap_quantiles.png",
+    "12_normalized_gap_distribution/figures/12_tail_exceedance_rates.png",
+    "12_normalized_gap_distribution/figures/12_js_divergence_to_exp1.png"
+  ],
+  "data": {
+    "summary": "12_normalized_gap_distribution/data/12_summary.csv",
+    "normalized_gaps_sample": "12_normalized_gap_distribution/data/12_normalized_gaps_sample.csv",
+    "window_metrics": "12_normalized_gap_distribution/data/12_window_metrics.csv",
+    "histogram_by_window": "12_normalized_gap_distribution/data/12_histogram_by_window.csv",
+    "tail_exceedance": "12_normalized_gap_distribution/data/12_tail_exceedance.csv"
+  },
+  "docs": {
+    "interpretation": "12_normalized_gap_distribution/docs/12_interpretation.md",
+    "design_notes": "12_normalized_gap_distribution/docs/12_design_notes.md"
+  },
+  "tex": {
+    "summary_snippet": "12_normalized_gap_distribution/tex/12_summary_snippet.tex",
+    "math_notes": "12_normalized_gap_distribution/tex/12_math_notes.tex"
+  }
+}
