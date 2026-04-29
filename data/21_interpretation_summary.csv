@@ -1,0 +1,6 @@
+claim,value,best_p_value_against_nulls,interpretation
+js_empirical_vs_markov,0.000747782668085696,0.004975124378109453,statistically strong
+mi_excess_over_shuffle_bits,0.040161392407088645,0.004975124378109453,statistically strong
+rank4_improvement,0.7409288542261142,0.46766169154228854,descriptive / not significant
+top_singular_value,0.041368120292948014,0.004975124378109453,statistically strong
+two_step_l2_residual,0.06678632496563655,0.004975124378109453,statistically strong
