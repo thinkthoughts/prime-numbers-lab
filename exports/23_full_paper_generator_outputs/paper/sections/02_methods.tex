@@ -1,0 +1,21 @@
+Let \(r_n\in R\) denote the residue class modulo 30 of the \(n\)-th prime greater than 5. We define the first-order transition operator
+\[
+P_{ij}=\Pr(r_{n+1}=j\mid r_n=i),
+\]
+and the empirical two-step operator
+\[
+P^{(2)}_{ik}=\Pr(r_{n+2}=k\mid r_n=i).
+\]
+The first-order Markov baseline predicts two-step transitions as
+\[
+(P^2)_{ik}=\sum_j P_{ij}P_{jk}.
+\]
+The higher-order residual is then
+\[
+\Delta=P^{(2)}-P^2.
+\]
+We analyze \(\Delta\) using the singular value decomposition
+\[
+\Delta=\sum_{\ell=1}^{8}\sigma_\ell u_\ell v_\ell^\top.
+\]
+Low-rank approximations retain the first \(k\) singular modes and compare prediction error as a function of \(k\). To evaluate whether the residual is a sampling artifact, we compare the real sequence to iid shuffles, Markov synthetic sequences generated from \(P\), block shuffles, residue-balanced shuffles, and gap-shuffle controls. Statistical validation uses null ensembles, block/window bootstrap, confidence bands, rank-stability diagnostics, and p-value summaries.
