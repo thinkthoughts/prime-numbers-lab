@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Sieve Constraints}
+
+\subsection*{Initial candidate set}
+
+\[
+S_0 = \{2,3,4,\dots,N\}.
+\]
+
+\subsection*{Layered sieve update}
+
+Let $q_k$ denote the $k$-th prime filter.
+\[
+S_k = S_{k-1} \setminus \{n : q_k \mid n,\ n \ne q_k\}.
+\]
+
+\subsection*{Final retained set}
+
+If all prime filters $q_k \le \sqrt{N}$ are applied, then
+\[
+S_{\mathrm{final}} = \{p : p \le N,\ p \text{ prime}\}.
+\]
+
+\subsection*{Retention and drift}
+
+\[
+retention_k = \frac{|S_k|}{|S_0|}.
+\]
+\[
+drift_k = 1 - retention_k.
+\]
+
+\subsection*{CGCS score}
+
+Let $P_N = \{p : p \le N\}$.
+\[
+CGCS_{\mathrm{sieve}} =
+\frac{|S_{\mathrm{final}} \cap P_N|}{|P_N|}.
+\]
+
+Measured value:
+\[
+CGCS_{\mathrm{sieve}} = 1.000000.
+\]
+
+\subsection*{Recoverability}
+
+The full sieve recovers prime identity exactly up to $N$, provided all filters $q \le \sqrt{N}$ are applied.
+
+\end{document}

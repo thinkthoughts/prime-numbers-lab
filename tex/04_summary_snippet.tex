@@ -1,0 +1,17 @@
+\section*{Sieve Constraints}
+
+This notebook measures layered sieve filtering:
+\[
+S_k = S_{k-1} \setminus \{n : q_k \mid n,\ n \ne q_k\}.
+\]
+
+For $N=200,000$:
+\begin{itemize}
+  \item initial candidates $= 199999$
+  \item final retained candidates $= 17984$
+  \item reference prime count $= 17984$
+  \item $CGCS_{sieve} = 1.000000$
+  \item exact match $= True$
+\end{itemize}
+
+The full sieve recovers prime identity exactly up to $N$ when all prime filters $q \le \sqrt{N}$ are applied.
