@@ -1,0 +1,14 @@
+
+\paragraph{Operator-dynamic validation.}
+Let \(P\) denote the first-order transition operator on reduced residue classes modulo \(30\), and let
+\(P^{(2)}_{\mathrm{emp}}\) denote the empirical two-step transition operator.  The Markov prediction is
+\(P^2\), so the higher-order memory residual is
+\[
+\Delta = P^{(2)}_{\mathrm{emp}} - P^2 .
+\]
+A singular-value decomposition of \(\Delta\) shows that most residual energy is captured by a small
+number of modes.  In this run, rank-4 captures at least \(90\%\) and rank-5 captures at least
+\(95\%\) of the residual energy.  The rank-4 correction \(M_4\) reduces the two-step operator error
+from 0.00834829 to 0.0021628, corresponding to a 74.09\% reduction.  Mode-ablation tests further show that
+individual singular modes contribute functionally to predictive accuracy, supporting the view that
+the two-step deviation is structured low-rank memory rather than unstructured sampling noise.
