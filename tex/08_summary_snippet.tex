@@ -1,0 +1,24 @@
+\section*{Local Gap Reconstruction}
+
+This notebook compares density-only reconstruction against local-gap reconstruction.
+
+Expected local prime spacing is approximated by
+\[
+g(x)\sim \log x.
+\]
+
+Gap drift is measured by
+\[
+drift_{\mathrm{gap}} =
+\operatorname{mean}_i \frac{|g_i-\log p_i|}{\log p_i}.
+\]
+
+For $N=200,000$:
+\begin{itemize}
+  \item mean density-only $F_1 = 0.995448$
+  \item mean local-gap $F_1 = 0.995420$
+  \item mean density-only gap drift $= 0.587539$
+  \item mean local-gap gap drift $= 0.583631$
+\end{itemize}
+
+Density restores missing mass; local gap scoring tests structural plausibility.

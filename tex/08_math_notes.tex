@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Math Notes: Local Gap Reconstruction}
+
+\subsection*{Prime set}
+\[P_N=\{p:p\le N\}.\]
+
+\subsection*{Precision and recovery}
+\[precision=\frac{|\hat{P}_N\cap P_N|}{|\hat{P}_N|}.\]
+\[recovery=\frac{|\hat{P}_N\cap P_N|}{|P_N|}.\]
+
+\subsection*{F1}
+\[F_1=\frac{2\cdot precision\cdot recovery}{precision+recovery}.\]
+
+\subsection*{Expected local gap}
+\[g(x)\sim \log x.\]
+
+\subsection*{Candidate score}
+\[
+score(x)=w_d\,score_{\mathrm{density}}(x)+w_g\,score_{\mathrm{gap}}(x)+w_n\,score_{\mathrm{neighbor}}(x).
+\]
+
+\subsection*{Gap drift}
+\[
+drift_{\mathrm{gap}}=
+\operatorname{mean}_i \frac{|g_i-\log p_i|}{\log p_i}.
+\]
+
+Candidate completions are hypotheses, not proofs of primality.
+
+\end{document}
