@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.env/
+.envrc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebook outputs (keep figures, ignore temp)
+outputs/
+exports/
+
+# Generated zip bundles
+*_outputs.zip
+*_export.zip
+
+# LaTeX build junk
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Optional: ignore large intermediates
+*.npy
+*.npz
+
+# VSCode / editors
+.vscode/
+.idea/
