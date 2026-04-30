@@ -1,0 +1,12 @@
+Residue-class transitions of consecutive primes (mod 30):
+
+Δ = P^(2) − P^2
+
+This residual operator is low-rank.
+
+A small number of components explain most of the deviation.
+
+Not explained by iid or first-order Markov models.
+
+Paper:
+[link]
