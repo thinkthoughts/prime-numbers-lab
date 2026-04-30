@@ -10,7 +10,7 @@ Each bridge isolates a measurable object—typically the transition operator \(P
 
 —and connects it to a specific domain such as prime gaps or spectral structure.
 
-The goal is not to resolve these problems, but to define concrete, testable correspondences.
+The goal is to define concrete, testable correspondences.
 
 ---
 
