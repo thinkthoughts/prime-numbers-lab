@@ -70,7 +70,7 @@ Define:
 
 This compares observed two-step structure with the first-order baseline.
 
-\(\Delta\) isolates structure not accounted for by \(P\).
+\(\Delta\) isolates structure distinct from \(P\).
 
 ---
 
@@ -123,9 +123,7 @@ This heatmap shows the transition operator \(P\), with twin-prime-compatible ent
 
 ## Interpretation
 
-This framework does not address the asymptotic question of the twin prime conjecture.
-
-It provides:
+This framework provides:
 
 - a representation of twin-prime-compatible transitions  
 - a direct measurement of their frequency  
