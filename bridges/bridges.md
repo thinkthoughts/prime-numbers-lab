@@ -1,14 +1,16 @@
 # Bridges — Table of Contents
 
-This directory connects the residue-transition framework to specific problems and domains.
+This section presents structured interfaces between residue-class transition operators and established mathematical questions.
 
-Each bridge isolates a concrete interface between:
+Each bridge isolates a measurable object—typically the transition operator \(P\) or residual operator
 
-- residue transitions  
-- transition operators \(P\)  
-- residual operator \(\Delta = P^{(2)} - P^2\)  
+\[
+\Delta = P^{(2)} - P^2
+\]
 
-and a target question.
+—and connects it to a specific domain such as prime gaps or spectral structure.
+
+The goal is not to resolve these problems, but to define concrete, testable correspondences.
 
 ---
 
@@ -17,10 +19,16 @@ and a target question.
 ### Twin primes
 
 - [`bridge_twin_primes.md`](bridge_twin_primes.md)  
-  Residue-level interpretation of twin-prime-compatible transitions.
+  Residue transitions modulo 30 identify and measure twin-prime-compatible gap \(+2\) structure.  
+  _Twin primes → gap +2 residue transitions_
+
+---
+
+### Asymptotic twin primes
 
 - [`bridge_asymptotic_twin.md`](bridge_asymptotic_twin.md)  
-  Finite-to-asymptotic interface via transition operators and Δ.
+  Finite-scale operator \(\Delta = P^{(2)} - P^2\) tracks how twin-prime-compatible structure behaves as sample size increases.  
+  _Asymptotic twin → scaling of \(\Delta\) under \(N\)_
 
 ---
 
@@ -29,16 +37,8 @@ and a target question.
 ### Zeta function
 
 - [`bridge_zeta.md`](bridge_zeta.md)  
-  Connection between residue transitions and spectral structure.
-
----
-
-## Notes
-
-These bridges:
-
-- define measurable correspondences  
-- provide experiment paths via `scripts/`  
+  Residue transition operators provide a finite-state proxy for studying structured deviations analogous to spectral correlations.  
+  _Zeta → spectral-type structure in finite operators_
 
 ---
 
@@ -51,7 +51,10 @@ These bridges:
 
 ## Summary
 
-Bridges map:
+Bridges define mappings of the form:
 
 ```text
 residue transitions → operators (P, Δ) → domain-specific structure
+```
+
+They provide entry points for extending the framework through computation and comparison.
