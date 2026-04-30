@@ -1,33 +1,85 @@
-# Prime Numbers Lab — Residue Transition Structure
+# Prime Numbers Lab — Residue-Class Transitions of Consecutive Primes
 
-This repository studies higher-order structure in consecutive prime gaps via residue-class transitions modulo 30.
+![banner](banner.svg)
 
-## Pipeline
+This repository accompanies the paper:
 
-- **Notebook 16** — Transition operator (first-order)
-- **Notebook 17** — Higher-order memory (two-step)
-- **Notebook 18** — Low-rank spectral decomposition
-- **Notebook 19** — Operator dynamics + validation
-- **Notebook 20** — Synthetic controls
-- **Notebook 21** — Statistical validation layer
-- **Notebook 22** — Publication figure pack
-- **Notebook 23** — Full paper generator
+👉 `paper/main.pdf`
 
-## Key Result
+---
 
-We identify statistically significant higher-order structure in prime-gap residue transitions that is not explained by:
+## 📌 Summary
 
-- iid shuffle
-- first-order Markov models
-- simple control baselines
+Reducing consecutive primes modulo 30 yields a sequence over 8 residue states:
 
-The residual operator admits a low-rank decomposition, indicating structured memory beyond first-order dynamics.
+{1, 7, 11, 13, 17, 19, 23, 29}
 
-## Figures
+From this sequence, we construct a transition operator P and compare the two-step operator P^(2) to the baseline P^2.
 
-See `/figures/` for publication-ready outputs.
+The residual operator
 
-## Reproducibility
+Δ = P^(2) − P^2
+
+exhibits higher-order structure and admits a low-rank representation.
+
+---
+
+## 📄 Paper
+
+See:
+
+```
+paper/main.pdf
+```
+
+---
+
+## 📊 Figures
+
+All publication figures are available in:
+
+```
+figures/
+```
+
+These include:
+
+- transition operator heatmap  
+- residual operator visualization  
+- singular value spectrum  
+- statistical validation  
+- summary ratios  
+
+---
+
+## 📁 Repository Structure
+
+```
+paper/        # LaTeX source and compiled PDF
+figures/      # publication-ready figures
+src/          # core computation modules
+scripts/      # reproducibility scripts
+notebooks/    # exploratory analysis
+```
+
+---
+
+## ▶️ Reproducibility
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Generate all figures:
+
+```bash
+python scripts/generate_figures.py
+```
+
+---
+
+## 🧭 Reference
+
+If you use this work, cite the paper in `paper/main.pdf`.
