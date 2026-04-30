@@ -1,0 +1,39 @@
+<svg width="1600" height="400" viewBox="0 0 1600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0b0b0b"/>
+      <stop offset="100%" stop-color="#0b0b0b" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="400" fill="#0b0b0b"/>
+
+  <!-- Right-side heatmap-style blocks -->
+  <g opacity="0.8">
+    <rect x="900" y="50" width="600" height="300" fill="#440154"/>
+    <rect x="950" y="100" width="500" height="200" fill="#31688e"/>
+    <rect x="1000" y="140" width="400" height="120" fill="#35b779"/>
+    <rect x="1050" y="170" width="300" height="60" fill="#fde725"/>
+  </g>
+
+  <!-- Fade overlay -->
+  <rect x="800" y="0" width="400" height="400" fill="url(#fade)"/>
+
+  <!-- Text -->
+  <text x="80" y="140" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="bold">
+    Prime Numbers Lab
+  </text>
+
+  <text x="80" y="190" fill="#eaeaea" font-family="Arial, Helvetica, sans-serif" font-size="22">
+    Residue-Class Transitions of Consecutive Primes
+  </text>
+
+  <text x="80" y="260" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="36">
+    Δ = P^(2) − P^2
+  </text>
+
+  <text x="80" y="300" fill="#bdbdbd" font-family="Arial, Helvetica, sans-serif" font-size="18">
+    Low-rank structure
+  </text>
+</svg>
