@@ -4,8 +4,8 @@
 
 📄 **Paper:** [`paper/main.pdf`](paper/main.pdf)  
 📘 **Overview:** [`docs/overview.md`](docs/overview.md)  
+🔗 **Bridges:** [`bridges/bridges.md`](bridges/bridges.md)  
 📊 **Figures:** [`figures/`](figures/)  
-
 ---
 
 ## Summary
