@@ -35,21 +35,13 @@ Modern results show that primes have bounded gaps:
 
 This does not yet reach gap \(2\), but demonstrates asymptotic structure in prime gaps.
 
-These results arise from:
-
-- sieve methods  
-- distribution of primes in arithmetic progressions  
-- weighted constructions  
-
 ---
 
 ## Where this repository fits
 
-This repository does not operate at the asymptotic level.
+This repository studies:
 
-It studies:
-
-- finite samples of primes  
+- finite samples of primes (see `data/`)  
 - residue transitions modulo \(30\)  
 - transition operators \(P\)  
 - residual operator
@@ -57,138 +49,51 @@ It studies:
   \Delta = P^{(2)} - P^2
   \]
 
-This is a finite-scale, operator-based perspective.
+---
+
+## Δ twin-slice experiment
+
+Notebook:
+
+```
+../scripts/delta_twin_slice.ipynb
+```
 
 ---
 
-## Conceptual bridge
+### Δ twin slice entries
 
-Twin primes correspond to a two-point correlation:
+![Delta twin slice entries](../figures/delta_twin_slice_entries.png)
 
-\[
-p,\; p+2
-\]
-
-This can be interpreted as:
-
-gap = 2 ↔ local correlation
-
-In this repository:
-
-\[
-\Delta = P^{(2)} - P^2
-\]
-
-acts as a finite-state correlation residual.
+Data:  
+`../figures/delta_twin_slice_entries.csv`
 
 ---
 
-## Key alignment
+### Δ twin slice vs controls
 
-| Concept | Asymptotic setting | This repository |
-|--------|------------------|-----------------|
-| Twin primes | gap = 2 events | residue transitions \(r \to r+2\) |
-| Correlation | pair correlation | operator \(\Delta\) |
-| Structure | density / asymptotics | low-rank behavior |
-| Model deviation | sieve vs heuristic | \(P^{(2)} - P^2\) |
+![Delta twin slice vs controls](../figures/delta_twin_slice_vs_controls.png)
+
+Data:  
+`../figures/delta_twin_slice_controls.csv`
 
 ---
 
-## Finite-to-asymptotic interface
+### Δ twin slice scaling
 
-The relevant question is not:
+![Delta twin slice scaling](../figures/delta_twin_slice_scaling.png)
 
-Does this prove twin primes?
-
-but:
-
-Do observed finite-scale structures stabilize or drift with N?
-
----
-
-## Practical asymptotic-facing experiments
-
-### 1. Scaling in N
-
-Extend:
-
-scripts/twin_prime_transition_experiment.ipynb
-
-Track as \(N\) increases:
-
-- \(P_{11,13}, P_{17,19}, P_{29,1}\)  
-- corresponding entries in \(\Delta\)
-
----
-
-### 2. Compare with heuristic density
-
-Compute:
-
-- observed twin prime counts up to \(N\)  
-- predicted counts:
-  \[
-  2C_2 \frac{N}{(\log N)^2}
-  \]
-
----
-
-### 3. Δ-slice for twin transitions
-
-Examine:
-
-Δ entries aligned with (11→13), (17→19), (29→1)
-
----
-
-### 4. Modulus refinement
-
-Move:
-
-mod 30 → mod 210
-
----
-
-### 5. Synthetic comparison
-
-Generate:
-
-- iid shuffle  
-- Markov model  
-- Cramér-style model  
-
-Compare P and Δ.
-
----
-
-## Interpretation
-
-This framework provides:
-
-- a finite representation of prime transitions  
-- a measurable correlation object (\(\Delta\))  
-- a way to track specific gap-related transitions  
-
-It does not establish asymptotic results.
+Data:  
+`../figures/delta_twin_slice_scaling.csv`
 
 ---
 
 ## Summary
 
-The twin prime conjecture is an asymptotic statement about prime gaps.
-
-This repository provides a finite-scale operator framework:
+This provides a finite-scale operator:
 
 \[
 \Delta = P^{(2)} - P^2
 \]
 
-which acts as a correlation diagnostic.
-
-The bridge between them lies in:
-
-- tracking twin-prime-compatible transitions  
-- studying their behavior across increasing \(N\)  
-- comparing with probabilistic models  
-
-This positions the framework as a computational interface to asymptotic questions.
+as a correlation diagnostic aligned with twin-prime-compatible transitions.
