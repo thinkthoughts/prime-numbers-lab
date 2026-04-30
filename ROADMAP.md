@@ -9,7 +9,7 @@ This roadmap outlines next steps for development, outreach, and research expansi
 ### Goal
 Engage researchers in number theory, probabilistic primes, and related fields.
 
-### Targets
+### Targets (lol)
 
 - Terence Tao
 - James Maynard
