@@ -37,7 +37,6 @@ and a target question.
 
 These bridges:
 
-- do not claim proofs  
 - define measurable correspondences  
 - provide experiment paths via `scripts/`  
 
